@@ -14,4 +14,4 @@
 | MEAN Workshop                                         | 4h       | Tue | 12.01 |               |          | 
 | Подготовка за изпит                                   | 4h       | Wed | 13.01 |               | Ivo      | 
 | Защита на отборна работа                              | all day  | Thu | 14.01 |               | Trainers | 
-| Практически изпит                                     | all day  | Fri | 15.01 |               | Trainers | 
+| Практически изпит                                     | all day  | Fri | 15.01 | 10:00 - 18:00 | Trainers | 
