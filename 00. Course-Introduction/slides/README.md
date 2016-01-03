@@ -1,7 +1,7 @@
 <!-- section start -->
 <!-- attr: { id:'title', class:'slide-title', hasScriptWrapper:true } -->
 # End-to-end JavaScript Applications (Node.js)
-## Course Program, Evaluation, Exams, Resources
+## Course Program, Evaluation, Exam, Trainers, Resources
 
 <div class="signature">
     <p class="signature-course">End-to-end JavaScript Applications</p>
@@ -14,7 +14,7 @@
 <!-- attr: { id:'table-of-contents' } -->
 # Table of Contents
 - What's Coming Next in the Academy?
-- The End-to-end JavaScript Applications (Node.js) Program
+- The End-to-end JavaScript Applications (Node.js) Course Program
 - The Trainers Team
 - Exams and Evaluation
   - The Practical Exam
@@ -23,24 +23,24 @@
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', id:'coming-next' } -->
-# End-to-end JavaScript Applications
-## The Next Module in the Software Academy (The Web Track)
+# End-to-end JavaScript Applications (Node.js)
+## The Next Course in the Web Track of the Telerik Software Academy
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # What's Coming Next?
-- `End-to-end JavaScript Applications (Node.js)`
+- `End-to-end JavaScript Applications (Node.js)` Course
   - Continuation of Single Page Applications (AngularJS)
-  - MEAN Stack: Mongo, ExpressJS, AngularJS, Node.js
+  - MEAN Stack: MongoDB, ExpressJS, AngularJS, Node.js
 - Lectures 5 times a week
 - The course exam?
-  - Practical exam (Peer evaluation)
-  - Friday, January 15, 2016
+  - Practical exam (with peer evaluation)
+	- Friday, January 15, 2016
   - Evaluations till 10:00 on January 18, 2016 (Monday)
 
 
 [Curriculum](http://academy.telerik.com/images/default-source/Academy_Curriculum/ta_plan_bg.png?sfvrsn=0)
 
-[link to table in the forum](http://telerikacademy.com/Forum/Questions/179433/%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D1%8A%D1%87%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B4%D0%BE-%D0%BA%D1%80%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F%D1%82%D0%B0#forum-post-179433)
+[link to courses schedule table in the forum](http://telerikacademy.com/Forum/Questions/179433/%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D1%8A%D1%87%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B4%D0%BE-%D0%BA%D1%80%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F%D1%82%D0%B0#forum-post-179433)
 
 
 <!-- section start -->
@@ -212,11 +212,11 @@
 # The Trainers Team
 
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
-# Lead Trainer
+# The Trainers Team
 <img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/156624_469418087372_5976799_n.jpg?oh=93469ededb8b0f23235f66f45247da8e&oe=57094C23" style="float:right" height="240" />
 -   **Vasil Dininski**
 	-   Software Developer<br />@ Telerik (Progress)
-	-   Champion from Telerik Software Academy 2012/2013
+	-   Champion from<br />Telerik Software Academy
 	-   E-mail: vasil.dininski [at] telerik.com
 	-   Blog: <a href="http://www.vasil.me/" title="Vasil Dininski's Blog" target="_blank">http://www.vasil.me/</a>
 	-   GitHub: <a href="https://github.com/dininski" title="GitHub URL" target="_black">https://github.com/dininski</a>
@@ -226,8 +226,7 @@
 <img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
 -   **Ivaylo Kenov**
 	-   Technical Trainer @ Telerik Academy
-	-   Mathematical competitions
-	<br />contestant
+	-   Mathematical competitions<br />contestant
 	-   Champion from Telerik Software Academy
 	-   E-mail: ivaylo.kenov [at] telerik.com
 	-   Champion in OOP and DSA
@@ -255,7 +254,7 @@
 	-   Microsoft Certified Trainer (MCT)
 	-   Champion from Telerik Academy
 	-   IT and Informatics competitions winner
-	-   Student in Sofia University / NBU (Computer Science)
+	-   Student in Sofia University<br />and NBU (Computer Science)
 	-   Email: nikolay.kostov [at] telerik.com
 	-   Blog: <a href="http://nikolay.it" title="http://nikolay.it" target="_blank">http://nikolay.it</a>
 	-   GitHub: <a href="https://github.com/NikolayIT" title="https://github.com/NikolayIT" target="_blank">https://github.com/NikolayIT</a>
@@ -272,9 +271,9 @@
   - **Practical exam** – 50%
     - **Exam evaluation** – 10%
   - **Teamwork** - 16%
-  - **Homework** – 5%
+  - **Homework** – 5% (5 homeworks)
     - **Homework evaluation** – 5%
-  - **Attendance in class** – 4%
+  - **Attendance in class** – 4% (8 lectures)
   - **Forums activity** – up to 5%
   - **Helping others** – up to 5%
 
@@ -282,10 +281,11 @@
 # Pass / Excellence / Fail Criteria
 -	Criteria for pass / pass with excellence / fail
 	-	Pass with excellence
-		-	Very high exam results
+		-	Very high exam results or
 		-	High total results
 	-	Pass
-		-	Average total results
+		-	Average total results and
+		-	Good exam results
 	-	Fail
 		-	Low total results or low exam results
 
@@ -311,16 +311,20 @@
 	-	Find solutions for the exercises
 	-	Share source code / discuss ideas
 -	The course official [web site](http://academy.telerik.com/student-courses/software-technologies/end-to-end-javascript-applications/about)
-
-
-# Telerik Integrated Learning System (TILS)
 -	The Telerik Integrated Learning System ([TILS](http://www.telerikacademy.com))
 	-	Important resource for all students
-	-	Homework submissions
-	-	Homework peer reviews
+	-	Homework submissions / peer reviews
 	-	Presence cards with barcode
 	-	Reports about your results
 -	[Course site](http://telerikacademy.com/Courses/Courses/Details/305)
+
+
+# End-to-end JavaScript Applications (Node.js)
+[http://nodejs.org/](http://nodejs.org/) - NodeJS official web site
+[http://nodejs.org/api/](http://nodejs.org/api/) - API documentation
+[http://blog.nodejitsu.com/npm-cheatsheet](http://blog.nodejitsu.com/npm-cheatsheet) - NPM documentation
+[https://npmjs.org/](https://npmjs.org/) - NPM official web site
+[https://github.com/felixge/node-style-guide](https://github.com/felixge/node-style-guide) - NodeJS style guide
 
 
 # Required Software
