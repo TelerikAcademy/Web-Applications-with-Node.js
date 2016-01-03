@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    title 
+      | This is the title in the tab of the browser
+  body
+    #root 
+      h1: a(href='#', target='_blank')
+          | This is the header title
+      ul
+        each val in [1,2,3,4,5]
+          li
+            if (val % 3 === 0)
+              | divisible by 3
+            else if(val % 3 === 1)
+              | almost divisible by 3
+            else
+              | not divisible by 3
+
+
+
+
+
+
+
+

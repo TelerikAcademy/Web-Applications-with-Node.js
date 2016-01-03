@@ -1,0 +1,29 @@
+#wrapper
+  header
+    h1#logo
+      a(href='...')
+        = title
+    if user
+        nav#main-nav: ul
+            each item in nav
+                li.nav-item
+                    a(href= item.url) 
+                        = item.title
+        p#content
+            h2
+                = 'Welcome, ' + user.name + '!'
+            p
+                = content
+    else
+        div#loginbox
+            label(for='tb-username') 
+                | Username:
+            input(type='text', id='tb-username')
+            br
+            label(for='tb-password') 
+                | Password:
+            input(type='password', id='tb-password')
+            br
+            button
+                | Login
+

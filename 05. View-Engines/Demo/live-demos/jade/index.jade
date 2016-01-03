@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    title 
+      | This is the title in the tab of the browser
+  body
+    #root(ng-controller="MainController")
+      h1: a(href=url, target='_blank')
+          = title
+      ul
+        each type in types
+          li
+            = type
+      ul
+        li(ng-repeat='fruit in fruits')

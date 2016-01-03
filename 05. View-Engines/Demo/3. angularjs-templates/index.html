@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client-side View Engines: KendoUI</title>
+	<link rel="stylesheet" type="text/css" href="styles/slider.css">
+	<style>
+		#wrapper{
+			width:960px;
+			margin:0 auto;
+		}
+		img.selected{
+			width: 160px;
+		}
+	</style>
+</head>
+<body ng-app="app">
+	<div id="wrapper" ng-controller="ImagesController">
+		<div class="slider">
+			<strong>{{currentImage.title}}</strong>
+			<img class="slider-current-image" ng-src = "{{currentImage.src}}" width=800 />
+			<ul class="slider-images-list">
+				<li ng-repeat="(index, image) in images">
+					<img width="200"
+					 	   ng-if="image.selected"
+					 	   class="selected"
+							 ng-src="{{image.src}}" 
+							 ng-click="changeCurrent(index)"/>
+					<img width="200"
+					 	   ng-if="!image.selected"
+							 ng-src="{{image.src}}" 
+							 ng-click="changeCurrent(index)"/>
+				</li>
+			</ul>
+		</div>
+	</div>	
+
+<script src="vendor/angular.min.js"></script>
+<script>	
+	var app = angular.module('app', []);
+
+	app.controller('ImagesController', function ($scope) {
+		$scope.images = [{
+			title: 'QA Academy 2012/2013 Graduation',
+			src: 'imgs/9511183282_cbe735bb73_c.jpg',
+			selected: true
+		}, {
+			title: 'Joro in the state',
+			src: 'imgs/9787969001_8234454b2b_c.jpg',
+			selected: false
+		}, {
+			title: 'WordCamp Sofia 2013',
+			src: 'imgs/10491960273_070d7eb267_c.jpg',
+			selected: false
+		}, {
+			title: 'Software Academy 2012/2013 Graduation',
+			src: 'imgs/10542120106_91e455d696_c.jpg',
+			selected: false
+		}];
+		$scope.currentImage = $scope.images[0];
+
+		$scope.changeCurrent = function (index) {
+			$scope.currentImage.selected = false;
+			$scope.currentImage = $scope.images[index];
+			$scope.currentImage.selected=true;
+		};
+	});
+</script>
+	
+</body>
+</html>

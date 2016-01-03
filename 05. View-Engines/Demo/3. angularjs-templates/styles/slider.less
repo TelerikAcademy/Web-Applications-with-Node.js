@@ -1,0 +1,43 @@
+body{
+	.slider{
+		display: inline-block;
+		padding:5px;
+		border:1px solid black;
+		border-radius: 5px;
+
+		strong{
+			display: block;
+			font-size:24px;
+			text-align: center;
+			padding:15px;
+		}
+
+		.slider-current-image{
+			display:block;
+			margin:0 auto;
+			border-radius: 5px;			
+			margin-bottom: 15px;
+		}
+
+		.slider-images-list{
+			list-style-type: none;
+			padding:0;
+			margin:0;
+			margin-top:15px;
+			border-top:1px solid black;
+
+			li{
+				display:inline-block;
+				margin-left:5px;
+
+				&:first-of-type{
+					margin:0;
+				}
+
+				img{
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+#wrapper
+  header
+    h1#logo
+      a(href='...')
+        = title
+    nav#main-nav: ul
+        each item in nav
+            li.nav-item
+                a(href= item.url) 
+                    = item.title

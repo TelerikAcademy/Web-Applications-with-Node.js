@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Handlebars.js</title>
+	<style>
+		.mustaches-list{
+			list-style-type: none;
+			margin: 0;
+			margin-left:15px;
+			padding:0;
+		}
+		.mustaches-list li{
+			margin: 0;
+			padding:0;
+		}
+		.mustache-question{
+
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div id="mustaches-container"></div>
+	</div>
+
+	<script id="mustaches-list-template"
+					type="text/x-handlebars-template">
+		<h1 class="mustache-question">{{title}}</h1>	
+		<ul class="mustaches-list">
+			{{#types}}
+				<li class="mustache-item">
+					<input id="radio-mustache-{{.}}" type="radio" name="mustaches[]" value="{{.}}" />
+					<label for="radio-mustache-{{.}}">{{.}}</label>
+				</li>
+			{{/types}}
+		</ul>
+	</script>
+	<script src="handlebars.js"></script>
+	<script src="handlebarsjs-templates.js"></script>
+</body>
+</html>
