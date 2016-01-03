@@ -15,6 +15,6 @@
 		//returns an array with all messages between two users
 		chatDb.getMessages({
 		    with: 'DonchoMinkov',
-		    and: 'NikolayKostov
+		    and: 'NikolayKostov'
 		});
 		```
