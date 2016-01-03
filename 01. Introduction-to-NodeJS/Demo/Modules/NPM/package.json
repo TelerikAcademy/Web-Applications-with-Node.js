@@ -1,0 +1,14 @@
+{
+  "name": "SchoolAcademy",
+  "version": "0.1.0",
+  "description": "Testing NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivaylo",
+  "license": "MIT",
+  "devDependencies": {
+    "underscore": "^1.6.0"
+  }
+}
