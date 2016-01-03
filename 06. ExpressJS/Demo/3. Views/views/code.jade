@@ -1,0 +1,19 @@
+doctype
+html
+    head
+        title Inline Code
+    body
+        p
+            | With Jade we can also have inline code. For instance. Let's set some var and based on the condition to one thing or another.
+
+        - var env = 'dev';
+
+        - if (env == 'dev') {
+            p We are in dev environment
+        - } else {
+            p We are in prod environment
+        - }
+
+        p And some more text
+
+

@@ -1,0 +1,31 @@
+doctype
+html
+    head
+        title= title
+        link(href='/styles/style.css', rel='stylesheet')
+    body
+        h3 List of Customers
+
+        table(class='gridtable')
+            tr
+                th Id
+                th Name
+                th Email
+                th Telephone
+                th Edit
+                th Delete
+            each item in customers
+                tr
+                    td
+                        a(href='/customer/details/#{item.id}') #{item.id}
+                    td #{item.name}
+                    td #{item.email}
+                    td #{item.telephone}
+                    td
+                        a(href='/customer/edit/#{item.id}') Edit
+                    td
+                        a(href='/customer/delete/#{item.id}') Delete
+
+        p
+        #menu
+            a(href='/customer/create') Add new customer

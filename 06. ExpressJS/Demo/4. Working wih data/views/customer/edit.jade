@@ -1,0 +1,18 @@
+doctype
+html
+    head
+        title Edit existing customer
+        link(rel='stylesheet', href='/styles/style.css')
+    body
+        h3 Customer Details
+        form(id='form', method='post', action='/customer/edit/#{customer.id}')
+            label(for='Name') Name
+            input(type='text', id='name', name='name', value='#{customer.name}')
+            label(for='email') Email
+            input(type='email', id='email', name='email', value='#{customer.email}')
+            label(for='telephone') Telephone
+            input(type='tel', id='telephone', name='telephone', value='#{customer.telephone}')
+            input(type='submit', value='Update Customer')
+
+
+
