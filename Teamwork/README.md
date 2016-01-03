@@ -32,20 +32,20 @@ Your Web application should use the following technologies, frameworks and devel
 
 * At least **15 different dynamic web pages**
 * Use **NodeJS** (with **Express**) for the server (use an **MV*** pattern)
-* Use **AngularJS** for the client
+* Use **AngularJS** for the client-side (do not create single-page applications)
 * You should use **Jade** template engine for generating the UI
 * Use **MongoDB** as database back-end and **Mongoose** to access your database
 	* Using Repository pattern/Unit of Work is not mandatory
-* Create at least **two tables with data** with **server-side paging** and **sorting**
-	* You can use Kendo UI Grid or generate your own HTML tables
+* Create at least **four tables with data** with **server-side paging** and **sorting**
+	* You may use **Kendo UI** Grid or generate your own HTML tables
 * Use responsive design
-	* It may be based on **Bootstrap**, **Materialize** or any other UI framework)
+	* It may be based on **Bootstrap**, **Materialize** or any other UI framework
 * Use **Passport** for managing **users** and **roles**
 	* Your registered users should have at least one of the two roles: **user** and **administrator**
 * Use at least **one AJAX form and/or WebSockets communication**
 * Write at least **20 unit tests** for your controllers logic
 * Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
-* Prevent yourself from security holes (XSS, XSRF, Parameter Tampering, etc.)
+* Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
 	* Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
 * Use GitHub and take advantage of the **branches** for team collaboration.
 * Brief **documentation** of the project and project architecture (as `.md` file)
