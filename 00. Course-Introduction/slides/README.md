@@ -213,7 +213,7 @@
 
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
-<img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/156624_469418087372_5976799_n.jpg?oh=93469ededb8b0f23235f66f45247da8e&oe=57094C23" style="float:right" height="240" />
+<img src="https://avatars2.githubusercontent.com/u/2004693" style="float:right" height="240" />
 -   **Vasil Dininski**
 	-   Software Developer<br />@ Telerik (Progress)
 	-   Champion from<br />Telerik Software Academy
@@ -319,18 +319,21 @@
 -	[Course site](http://telerikacademy.com/Courses/Courses/Details/305)
 
 
-# End-to-end JavaScript Applications (Node.js)
-[http://nodejs.org/](http://nodejs.org/) - NodeJS official web site
-[http://nodejs.org/api/](http://nodejs.org/api/) - API documentation
-[http://blog.nodejitsu.com/npm-cheatsheet](http://blog.nodejitsu.com/npm-cheatsheet) - NPM documentation
-[https://npmjs.org/](https://npmjs.org/) - NPM official web site
-[https://github.com/felixge/node-style-guide](https://github.com/felixge/node-style-guide) - NodeJS style guide
+# Node.js Useful Links
+-	[http://nodejs.org/](http://nodejs.org/) - NodeJS official web site
+-	[http://nodejs.org/api/](http://nodejs.org/api/) - API documentation
+-	[http://blog.nodejitsu.com/npm-cheatsheet](http://blog.nodejitsu.com/npm-cheatsheet) - NPM documentation
+-	[https://npmjs.org/](https://npmjs.org/) - NPM official web site
+-	[https://github.com/felixge/node-style-guide](https://github.com/felixge/node-style-guide) - NodeJS style guide
 
 
 # Required Software
 -	Software needed for this course:
-  -	Microsoft Windows (Win8.1 / Win10) or any OS of your choice
+  - **Node.js**
+  - **NPM**
+  - **MongoDB** Server
   - **WebStorm** or any JavaScript IDE of your choice
+  -	Microsoft Windows (Win8.1 / Win10) or any OS of your choice
 
 
 <!-- section start -->
