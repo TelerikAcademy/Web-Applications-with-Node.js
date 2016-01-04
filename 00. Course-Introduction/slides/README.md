@@ -122,8 +122,8 @@
 <td>4h</td>
 <td>Thu</td>
 <td>7.01</td>
-<td>10:00 - 16:00</td>
-<td>Ivo/Niki</td>
+<td>11:00 - 15:00</td>
+<td>Doncho</td>
 </tr>
 <tr>
 <td>07</td>
@@ -298,7 +298,7 @@
 		-	Students **evaluate 3 random homeworks**
 		-	From the same topic, after the deadline
 		-	Homework comments are `not obligatory`
-		
+
 <!-- section start -->
 <!-- attr: { id:'resources', class:'slide-section' } -->
 # Resources
