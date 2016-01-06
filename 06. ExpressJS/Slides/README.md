@@ -281,7 +281,7 @@ app.use('/api/messages', function(req, res, next){
   - [passport](http://passportjs.org/) for authentication
   - [body-parser](https://github.com/expressjs/body-parser) for parsing the body of the request from urlencoded or json to JavaScript object
   - [cookie-parser](https://github.com/expressjs/cookie-parser) for using the cookies
-  - [cors](https://github.com/expressjs/cors) for **C**ross-**o**rigin **R**esource **S**haring
+  - [cors](https://github.com/expressjs/cors) for Cross-origin Resource Sharing
   - And more
 
 # Ready-to-use Middlewares
@@ -289,7 +289,40 @@ app.use('/api/messages', function(req, res, next){
 
 <!-- section start -->
 
+# Service Static Resources
+##  HTML, CSS, images, JS files
+
+# Serving Static Resources
+
+- ExpressJS can serve static resources
+  - HTML, CSS, images, video, SVGs
+  - JavaScript files for the client
+  - etc...
+- How?
+  - With a ready-to-use plugin built-in in ExpressJS:
+  - _Example:_ serves the contents of the **public** folder at the root of the server
+
+  ```javascript
+  app.use(express.static(path.join(__dirname, '/public')));
+  ```
+
+  - _Example:_ serves the contents of the **public** folder at endpoint '/public'
+
+  ```javascript
+  app.use('public', express.static(path.join(__dirname, '/public')));
+  ```
+
+# Serving Static Resources
+##  [Demo](http://)
+
+<!-- section start -->
+
 # Routes and Routers
+
+<!-- section start -->
+
+# Using View Engines with ExpressJS
+
 
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section' } -->

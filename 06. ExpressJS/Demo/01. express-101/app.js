@@ -11,6 +11,8 @@ let port = 3001;
 const DEFAULT_PAGE = 1;
 const DEFAULT_SIZE = 10;
 
+let path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
   console.log('Before each the request');
