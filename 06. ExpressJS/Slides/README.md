@@ -259,17 +259,40 @@ app.use(function(req, res, next){
 
 _Example:_ Middleware before a specific route:
 
-``
+```javascript
+app.use('/api/messages', function(req, res, next){
+  req.query.page = req.query.page || DEFAULT_PAGE;
+  req.query.size = req.query.size || DEFAULT_SIZE;
+});
+```
+
+# Using Custom Middlewares
+##  [Demo](http://)
+
+<!-- section start -->
+
+# Using ready-to-use Middlewares
+##  Don't reinvent the wheel
+
+# Using ready-to-use Middlewares
+
+- There are a lot of ready-to-use middlewares
+- Some, but not all are:
+  - [passport](http://passportjs.org/) for authentication
+  - [body-parser](https://github.com/expressjs/body-parser) for parsing the body of the request from urlencoded or json to JavaScript object
+  - [cookie-parser](https://github.com/expressjs/cookie-parser) for using the cookies
+  - [cors](https://github.com/expressjs/cors) for **C**ross-**o**rigin **R**esource **S**haring
+  - And more
+
+# Ready-to-use Middlewares
+##  [Demo](http://)
 
 <!-- section start -->
 
 # Routes and Routers
 
-
-
-
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section' } -->
 # Questions
-## Polymorphism
+## ExpressJS
 [link to Telerik Academy Forum](http://telerikacademy.com/Forum/Category/12/telerik-school-academy)
