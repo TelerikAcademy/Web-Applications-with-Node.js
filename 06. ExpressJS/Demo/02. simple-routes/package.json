@@ -1,17 +1,13 @@
 {
-  "name": "express-101",
+  "name": "express-simple-routes",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "node",
-    "expressjs"
-  ],
-  "author": "Doncho Minkov (DonchoMinkov@gmail.com)",
-  "license": "MIT",
+  "author": "Doncho Minkov (donchominkov@gmail.com)",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.13.3"
   }
