@@ -7,13 +7,14 @@ html
   body
     #root.container
       header
-        h1.jumbotron  The products gallery
-        nav
-          ul
-            each tab in ['home', 'products', 'products/add']
-              li
-                a(href='/' + tab)
-                  = tab
+        nav.navbar.navbar-default.row
+          .container-fluid
+            ul.nav.navbar-nav
+              each tab in [{link:'home', title:'Home'}, {link:'products', title:'Products'}, {link:'products/add', title: 'Add'}]
+                li
+                  a(href='/' + tab.link)
+                    =tab.title
+        h1.jumbotron The products gallery
       block content
     
     
