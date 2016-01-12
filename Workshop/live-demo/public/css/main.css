@@ -1,0 +1,7 @@
+.pagination a {
+  font-size: 1.3em
+}
+.pagination .current{
+  background-color: #ccc;
+  color: white;
+}
