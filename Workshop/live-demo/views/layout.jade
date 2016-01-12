@@ -1,0 +1,20 @@
+//- view/layout.jade
+doctype html
+html
+  head
+    link(href="components/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
+    block head
+  body
+    #root
+      header
+        h1  The products gallery
+        nav
+          ul
+            each tab in ['home', 'products']
+              li
+                a(href='/' + tab)
+                  = tab
+      block content
+    
+    
+  

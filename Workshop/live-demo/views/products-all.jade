@@ -1,0 +1,20 @@
+//- view/products-all.jade
+extend layout
+
+block head
+  style
+    | img{width: 100px}
+
+block content
+  h1
+    | Products
+  ol
+    each product in data
+      li
+        strong= product.name
+        em= product.date
+        if product.image
+          img(src=product.image)
+        else
+          img(src="images/product-default.jpg")
+  
