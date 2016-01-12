@@ -10,9 +10,15 @@ let productSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    required: true
+    required: true,
+    default: function() {
+      return Date.now();
+    }
   },
+  description: String,
+  price: Number,
   image: String
 });
+
 
 mongoose.model('Product', productSchema);

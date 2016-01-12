@@ -1,0 +1,25 @@
+//- view/product-add.jade
+extend layout
+
+block content
+  h1 Add new product
+
+  form.form(action="/products", method="POST")
+    .form-group.form-inline
+      label(for="name") Name:
+        input.form-control(name="name")
+    .form-group.form-inline
+      label
+        | Description:
+        input.form-control(name="description")
+    .form-group.form-inline
+      label
+        | Price
+        input.form-control(name="price", type="number")
+    .form-group.form-inline
+      label
+        | Image
+        input.form-control(name="image", type="text")
+    button.btn.btn-success Add product
+      
+  

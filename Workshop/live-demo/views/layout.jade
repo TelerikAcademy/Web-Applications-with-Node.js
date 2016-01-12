@@ -2,7 +2,7 @@
 doctype html
 html
   head
-    link(href="components/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
+    link(href="/components/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
     block head
   body
     #root
@@ -10,7 +10,7 @@ html
         h1  The products gallery
         nav
           ul
-            each tab in ['home', 'products']
+            each tab in ['home', 'products', 'products/add']
               li
                 a(href='/' + tab)
                   = tab
