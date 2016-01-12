@@ -8,14 +8,21 @@ block head
 block content
   h1
     | Products
-  ol
+  ul.media-list
     each product in data
-      li
-        a(href='/products/' + product._id)
-          strong= product.name
+      li.media
+        .media-left
+          a
+            if product.image
+              img.media-object(src=product.image)
+            else
+              img.media-object(src="images/product-default.jpg")
+        .media-body
+          h2.media-heading= product.name
+          p= product.description
           em= product.date
-          if product.image
-            img(src=product.image)
-          else
-            img(src="images/product-default.jpg")
-  
+          br
+          a.btn(href='/products/' + product._id)
+            | View details
+          
+          
