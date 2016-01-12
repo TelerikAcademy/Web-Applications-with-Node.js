@@ -2,19 +2,33 @@
 
 'use strict';
 
+const DEFAULT_PAGE = 1;
+const DEFAULT_SIZE = 10;
+
 module.exports = function(Product) {
   let controller = {
     get: function(req, res) {
-      Product.find({}, function(err, products) {
-        if (err) {
-          throw err;
-          // res.redirect('error')
-        }
+      let page = req.query.page || DEFAULT_PAGE;
+      let size = req.query.size || DEFAULT_SIZE;
 
-        res.render('products-all', {
-          data: products
+      Product.find({})
+        .skip((page - 1) * size)
+        .limit(size)
+        .exec(function(err, products) {
+          if (err) {
+            // res.redirect('error')
+            throw err;
+          }
+
+          Product.count({})
+            .exec(function(err, count) {
+              res.render('products-all', {
+                data: products,
+                pages: (count / size) | 0 + 1,
+                page: page
+              });
+            });
         });
-      });
     },
     getForm: function(req, res) {
       //check if user is authenticated
