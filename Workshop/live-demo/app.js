@@ -5,8 +5,11 @@
 let express = require('express'),
   mongoose = require('mongoose'),
   bodyParser = require('body-parser'),
-  path = require('path');
+  path = require('path'),
+  multer = require('multer');
 
+
+//DB Config
 let connectionString = "mongodb://localhost/it-gallery";
 mongoose.connect(connectionString);
 
@@ -14,8 +17,23 @@ require('./models');
 
 let app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Multer Config
 
+var storage = multer.diskStorage({
+  destination: './public/images',
+  filename: function(req, file, cb) {
+    console.log(file);
+    let ext = file.originalname.split('.')
+      .pop();
+    cb(null, file.fieldname + '-' + Date.now() + '.' + ext);
+  }
+});
+
+var upload = multer({
+  storage: storage
+});
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -27,7 +45,7 @@ app.get('/', function(req, res) {
   res.redirect('/home');
 });
 
-require('./routers')(app);
+require('./routers')(app, upload);
 
 let port = process.env.PORT || 3001;
 

@@ -11,10 +11,11 @@ block content
   ol
     each product in data
       li
-        strong= product.name
-        em= product.date
-        if product.image
-          img(src=product.image)
-        else
-          img(src="images/product-default.jpg")
+        a(href='/products/' + product._id)
+          strong= product.name
+          em= product.date
+          if product.image
+            img(src=product.image)
+          else
+            img(src="images/product-default.jpg")
   

@@ -10,13 +10,11 @@ let Product = mongoose.model('Product');
 
 let controller = require('../controllers/product-controller')(Product);
 
-router.get('/', controller.get)
-  .get('/add', controller.getForm)
-  .get('/:id', controller.getById)
-  .post('/', controller.post);
-
-module.exports = function(app) {
+module.exports = function(app, upload) {
+  router.get('/', controller.get)
+    .get('/add', controller.getForm)
+    .get('/:id', controller.getById)
+    .post('/', upload.single('image-file'), controller.post);
   app.use('/products', router);
-
 
 };

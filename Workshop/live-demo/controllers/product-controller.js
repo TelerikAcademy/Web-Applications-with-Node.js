@@ -3,7 +3,6 @@
 'use strict';
 
 module.exports = function(Product) {
-
   let controller = {
     get: function(req, res) {
       Product.find({}, function(err, products) {
@@ -42,14 +41,18 @@ module.exports = function(Product) {
     },
     post: function(req, res) {
       let reqProduct = req.body;
-
+      console.log(req.file);
       //validate product
+
+      if (!reqProduct.image && req.file) {
+        reqProduct.image = req.file.path.substr('public'.length);
+      }
 
       let product = new Product({
         name: reqProduct.name,
         description: reqProduct.description,
         price: +reqProduct.price,
-        image: reqProduct.image
+        image: reqProduct.image,
       });
 
       product.save(function(err) {
@@ -57,8 +60,6 @@ module.exports = function(Product) {
           throw err;
         }
 
-        console.log('--------------------------------------');
-        console.log('JUST BEFORE THE REDIRECT');
         res.status(201)
           .redirect('/products/' + product._id);
       });
