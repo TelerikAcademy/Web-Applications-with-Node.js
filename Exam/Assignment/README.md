@@ -40,24 +40,24 @@ Design a simple data layer to hold users and events.
   - Facebook/Twitter/LinkedIn/Google+ profiles are optional
   - The phone number is optional
   - A student can be part of many initiatives and in different season
-    - i.e. Peter Petrov can be part of School Academy Season 2011m School Academy Season 2012 and Software Academy Season 2013 (3 point)
-  - Use the Passport system to keep the users and their encrypted passwords. (2 point)
+    - i.e. Peter Petrov can be part of School Academy Season 2011m School Academy Season 2012 and Software Academy Season 2013 (3 points)
+  - Use the Passport system to keep the users and their encrypted passwords. (2 points)
 - Each event has a title, a brief description, location, category, type, its creator's name and phone number and a list of comments by users
   - Location is optional
   - Categories must be predefined and not editable by users (choose them wisely)
   - A type is constructed by two parts – initiative and season
     - The initiatives are "Software Academy", "Algo Academy", "School Academy" and "Kids Academy". They are constant and should be used as is
     - The seasons are as follows – "Started 2010", "Started 2011", "Started 2012" and "Started 2013"
-  - Comments can be left only by joined-in-the-event-users
+  - Comments can be left only by joined-in-the-event-users (4 points)
 - Fill some sample data in the DB to simplify any further testing. (2 points)
 - Your project should run after "copy/paste" deployment, without changing connection strings or other settings (1 point)
 
 ### Problem 2. Node.js Application – Common Features (21 points)
-- Use proper application architecture – separation of concerns and high quality code should be used
-- Layout – design a layout page to reuse the common page elements like headers and footers and navigation in all other pages in the project.  (2 point)
+- Use proper application architecture – separation of concerns and high quality code should be used (5 points)
+- Layout – design a layout page to reuse the common page elements like headers and footers and navigation in all other pages in the project. (2 point)
 - In the navigation when user is not authorized add link only to the home page, register and login pages.
-- For registered users add link to active (upcoming) events, past events, creating events.  (3 points)
-- Configure the Passport module to enable user management functionality (login / logout).  (4 points)
+- For registered users add link to active (upcoming) events, past events, creating events. (3 points)
+- Configure the Passport module to enable user management functionality (login / logout). (4 points)
   - The username should be between 6 and 20 characters long and can contain Latin letters, digits and the symbols '\_' (underscore), ' ' (space) and '.' (dot) (2 points)
 - Error handling – in case of errors (e.g. DB connection lost, incorrect request, etc.), an appropriate error message should be displayed. You are free to decide how exactly.  (3 points)
 - User interface (UI) – the user interface should be usable enough. It is not needed to be beautiful. Use Bootstrap if you want.  (2 points)
@@ -70,7 +70,7 @@ Design a simple data layer to hold users and events.
 
 ### Problem 4. User Area (40 points)
 - Registered users should be able to create, join or leave events
-  - List active events for the concrete user by categories
+  - List active events for the concrete user by categories (2 points)
     - Sort the events by date (the closest date at the top) (1 points)
     - Use server side paging (page size is 10) (2 points)
   - Create an event (2 points)
