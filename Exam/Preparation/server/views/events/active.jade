@@ -1,0 +1,23 @@
+extends ../shared/layout
+block main-content
+    .container
+        .row
+            .col-md-6.col-md-offset-3
+                h1.text-center Currently Listed Events
+                br
+                table.table-bordered.table
+                    tr
+                        th Title
+                        th Creator
+                        th Operations
+                    each event in data.events
+                        tr
+                            td #{event.title}
+                            td #{event.creator}
+                            td
+                                a.btn.btn-lg.btn-primary(href="/events/details/#{event._id}") View
+                br
+                ul.list-unstyled.list-inline.text-center
+                    - for(var i = 1; i <= data.total / data.pageSize; i++)
+                        li
+                            a.btn.btn-lf.btn-primary(href="/events/active?page=#{i}&pageSize=#{data.pageSize}") #{i}

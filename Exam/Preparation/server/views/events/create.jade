@@ -1,0 +1,32 @@
+extends ../shared/layout
+block main-content
+    form(method="post")
+        label(for="title") Title
+        input(id="title" class="form-control" type="text" name="title" placeholder="Title")
+        br
+        label(for="description") Description
+        input(id="description" class="form-control" type="text" name="description" placeholder="Description")
+        br
+        label(for="category") Category
+        select(id="category" class="form-control" name="category")
+            option(value="") Choose Category (Wisely)
+            each category in categories
+                option(value="#{category}") #{category}
+        br
+        label(for="initiative") Initiative
+        select(id="initiative" class="form-control" name="initiative")
+            each initiave in initiatives
+                option(value="#{initiave}") #{initiave}
+        br
+        label(for="season") Season
+        select(id="season" class="form-control" name="season")
+            each season in seasons
+                option(value="#{season}") #{season}
+        br
+        label(for="latitude") Latitude
+        input(id="latitude" class="form-control" type="number" name="latitude" placeholder="Latitude")
+        br
+        label(for="longitude") Longitude
+        input(id="longitude" class="form-control" type="number" name="longitude" placeholder="Longitude")
+        br
+        input(type="submit" class="btn btn-lg" value="Create")
