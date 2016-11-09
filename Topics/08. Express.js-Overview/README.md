@@ -10,10 +10,6 @@
 	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>
 
-
-
-
-<!-- section start -->
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
 - Middleware
@@ -24,6 +20,7 @@
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:15.38%; left:72.93%; width:30.91%; z-index:-1" /> -->
 
 
+<!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # node.js
 - Event-Driven, Asynchronous IO, Server-Side JavaScript library in C
@@ -65,6 +62,9 @@ http.createServer(function(req, res) {
   - http://www.senchalabs.org/connect/
 
 ```javascript
+$ npm install connect
+```
+```javascript
 var connect = require('connect');
 
 var app = connect()
@@ -78,17 +78,12 @@ http.createServer(app).listen(3000);
 ```
 
 
-```javascript
-$ npm install connect
-```
-
-
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Connect Middleware
 - Request Processing Pipeline
-- Response
-- Request
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:32.64%; left:10%; width:80%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -100,7 +95,8 @@ var connect = require('connect'),
     util = require('util');
 
 var interceptorFunction = function(request, response, next) {
-    console.log(util.format('Request for %s with method %s',        request.url, request.method));
+    console.log(util.format('Request for %s with method %s',
+        request.url, request.method));
     next();
 };
 
@@ -113,7 +109,7 @@ var app = connect()
 ```
 
 
-
+<!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Express.js 4.0
 - Has middleware built-in
@@ -128,13 +124,8 @@ var app = connect()
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Basic Architecture
-- Request
-- View
-- File
-- XML
-- JSONetc.
-- Function
-- Routing
+
+<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:24%; left:20%; width:60%; z-index:-1" /> -->
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -149,7 +140,8 @@ app.get('/', function (request, response) {
     response.send('Welcome to Express!');
 });
 
-app.get('/customer/:id', function (req, res) {    res.send('Customer requested is ' + req.params['id']);
+app.get('/customer/:id', function (req, res) {
+    res.send('Customer requested is ' + req.params['id']);
 });
 
 app.listen(3000);
@@ -159,13 +151,15 @@ app.listen(3000);
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Demo: Creating Express Applications
-## Simple ExpressJS application and "nodemon"
-## Create routes and require() them
-## Pass parameters
-## Configure middleware
+- Simple ExpressJS application and "nodemon"
+- Create routes and require() them
+- Pass parameters
+- Configure middleware
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:6.69%; left:13.23%; width:82.33%; z-index:-1" /> -->
 
 
+
+<!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Views in ExpressJS
 - User Interface
@@ -180,7 +174,6 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 ```
-
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
@@ -210,33 +203,30 @@ html(lang="en")
   body
 ```
 
-
-
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Demo: Views in ExpressJS
-## Show simple views in ExpressJS
-## Jade syntax examples
-## Layouts and blocks
-## Stylus
+- Show simple views in ExpressJS
+- Jade syntax examples
+- Layouts and blocks
+- Stylus
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:8.00%; left:30.20%; width:48.88%; z-index:-1" /> -->
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+
+<!-- section start -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:"font-size:0.75em" } -->
 # Working with Data
 - Pass data to the views
+
+```javascript
+res.render('index', { title: 'Customer List' });
+```
 - Read data from the views (bodyParser)
+
+```javascript
+res.render('index', { title: 'Customer List' });
+```
 - Read and send files
-- Data for all views
-
-```javascript
-res.render('index', { title: 'Customer List' });
-```
-
-
-```javascript
-res.render('index', { title: 'Customer List' });
-```
-
 
 ```javascript
 var filePath = req.files.picture.path;
@@ -244,7 +234,7 @@ var filePath = req.files.picture.path;
 res.download(filePath);
 res.sendfile(filePath);
 ```
-
+- Data for all views
 
 ```javascript
 app.locals.clock = { datetime: new Date().toUTCString()};
@@ -254,20 +244,22 @@ app.locals.clock = { datetime: new Date().toUTCString()};
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Demo: Working with data
-## Pass data to views (customer.index)
-## Submit data from views (customer.create)
-## Content negotiation (customer.details)
-## Upload files (customer.create)
-## Helpers (app.locals)
+- Pass data to views (customer.index)
+- Submit data from views (customer.create)
+- Content negotiation (customer.details)
+- Upload files (customer.create)
+- Helpers (app.locals)
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:5.12%; left:34.29%; width:41.07%; z-index:-1" /> -->
 
 
+
+<!-- section start -->
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
 # Demo: Advanced Scenarios
-## Cookies
-## Sessions
-## Custom middleware
-## Authentication and authorization
+- Cookies
+- Sessions
+- Custom middleware
+- Authentication and authorization
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:6.44%; left:33.46%; width:42.73%; z-index:-1" /> -->
 
 
@@ -285,7 +277,7 @@ app.locals.clock = { datetime: new Date().toUTCString()};
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-
+<!-- # Next Steps -->
 - Search on npm.org before you re-invent the wheel
 - Express is Lightweight Framework and Fast to work with
 - Testing is not optional
@@ -293,9 +285,11 @@ app.locals.clock = { datetime: new Date().toUTCString()};
 - JavaScript can get messy
 
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
+<!-- section start -->
+<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 # ExpressJS
-- http://academy.telerik.com
+## Questions?
+## http://academy.telerik.com
 
 
 
