@@ -4,7 +4,7 @@
 ## Heroku NodeJS Cloud Server
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:59.17%; left:57.20%; width:46.60%; z-index:-1" /> -->
 <article class="signature">
-	<p class="signature-course">Learning & Development</p>
+	<p class="signature-course">End-to-end JavaScript Applications</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>

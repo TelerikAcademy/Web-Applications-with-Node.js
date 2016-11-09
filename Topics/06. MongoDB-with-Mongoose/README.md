@@ -3,15 +3,12 @@
 # MongoDB and Mongoose
 ## Object-document Model
 <article class="signature">
-	<p class="signature-course">Learning & Development</p>
+	<p class="signature-course">End-to-end JavaScript Applications</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>
 
 
-
-
-<!-- section start -->
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
 - MongoDB Native Overview

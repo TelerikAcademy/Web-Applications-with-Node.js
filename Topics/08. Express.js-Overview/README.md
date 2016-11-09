@@ -5,7 +5,7 @@
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:50.80%; left:58.22%; width:34.33%; z-index:-1" /> -->
 <!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:17.98%; left:3.56%; width:59.60%; z-index:-1" /> -->
 <article class="signature">
-	<p class="signature-course">Learning & Development</p>
+	<p class="signature-course">End-to-end JavaScript Applications</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>
