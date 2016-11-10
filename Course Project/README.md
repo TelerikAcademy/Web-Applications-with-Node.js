@@ -1,23 +1,24 @@
-# Node.js Teamwork
+# Node.js Course Project
 
-This document describes the **teamwork assignment** for the **End-To-End JavaScript Applications (Node.js)** course at Telerik Academy.
+This document describes the **course project assignment** for the **Node.js** course at Telerik Academy.
 
 ## Project Description
 
-Design and implement an
-**End-To-End JavaScript application**. It can be a discussion forum, blog system, e-commerce site, online gaming site, social network, or any other web application by your choice.
+Design and implement an **End-to-end JavaScript application** using Node.js.  
+It can be a discussion forum, blog system, e-commerce site, online gaming site, social network, or any other web application by your choice.
 
-The application should have
+The application should have a:  
+
 * **public part** (accessible without authentication)
-* **private part** (available for registered users) and
+* **private part** (available for registered users)
 * **administrative part** (available for administrators only).
 
 ### Public Part
 
 The **public part** of your projects should be **visible without authentication**.
-This public part could be the application start page, the user login and user registration forms, as well as the public data of the users, e.g. the blog posts in a blog system, the public offers in a bid system, the products in an e-commerce system, etc.
+This public part could be the application start page, application statistics, the user login and user registration forms, as well as the public data of the users, e.g. the blog posts in a blog system, the public offers in a bid system, the products in an e-commerce system, etc.
 
-### Private Part (User Area)
+### Private Part (Registered users area)
 
 **Registered users** should have personal area in the web application accessible after **successful login**.
 This area could hold for example the user's profiles management functionality, the user's offers in a bid system, the user's posts in a blog system, the user's photos in a photo sharing system, the user's contacts in a social network, etc.
@@ -30,11 +31,10 @@ This area could hold for example the user's profiles management functionality, t
 
 Your Web application should use the following technologies, frameworks and development techniques:
 
-* At least **15 different dynamic web pages**
+* At least **10 different dynamic web pages**
 * Use **NodeJS** (with **Express**) for the server (use an **MV*** pattern)
-* Use **AngularJS** for the client-side (do not create single-page applications)
-* You should use **Jade** template engine for generating the UI
-* Use **MongoDB** as database back-end and **Mongoose** to access your database
+* Use **Jade** template engine for generating the UI
+* Use **MongoDB** as database back-end and **Mongoose (OR NOT)** to access your database
 	* Using Repository pattern/Unit of Work is not mandatory
 * Create at least **four tables with data** with **server-side paging** and **sorting**
 	* You may use **Kendo UI** Grid or generate your own HTML tables
@@ -48,25 +48,32 @@ Your Web application should use the following technologies, frameworks and devel
 * Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
 	* Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
 * Use GitHub and take advantage of the **branches** for team collaboration.
-* Brief **documentation** of the project and project architecture (as `.md` file)
+* Brief **documentation** of the project and the project architecture (as `.md` file)
 
 ### Optional Requirements
 
 * Nice looking UI supporting of all modern and old Web browsers
+* Use **AngularJS** for the client-side (do not create single-page applications)
 * Good usability (easy to use UI)
+
+### Workflow
+
+Split the project tasks between the team members equally. Each member must be responsible for individual tasks. All of the team members must be educated about how the different modules are communicating with each other. You will be asked about functionalities that were implemented by another member of your team, so make sure you understand how the whole application works.
 
 ### Deliverables
 
-Put the following in a **ZIP archive** and submit it (**each team member** submits the same file):
-* The **source code**
+Put the following in a **ZIP archive** and submit it (**each team member** submits the same file):  
+
+ * The **source code**
 	* **Don't submit the NPM packages**! They are not needed and take too much disk space.
-* The project documentation
+ * The project documentation
 
 ### Public Project Defense
 
-Each team will have to make a **public defense** of its work to the trainers (in 5-10 minutes). It includes:
+Each team will have to make a **public defense** of its work in front of the trainers (for about 30 minutes), in which each of the team members will answer to the trainers questions individually.
+The public defense includes:
 
-* Live **demonstration** of the developed web application (please prepare sample data).
+* Live **demonstration** of the developed web application (prepare sample data).
 * Explain application structure and its back-end and front-end **source code**
 * Show the **commit logs** in the source control repository to prove a contribution from all team members.
 
