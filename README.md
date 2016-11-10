@@ -57,4 +57,4 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1. _Live Demo:_ Изграждане на SPA Application
 1. _Workshop:_ Работа по курсовите проекти и консултации
 
-->
+-->
