@@ -8,7 +8,8 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 Курсът "Уеб приложения с Node.js" обхваща начините за използване Node.js. Първо ще започнем с основите: Какво е Node.js? Как да се използва Node.js?, работа с файловата система, и др. След това ще задълбочим и ще се потопим в работата с данни: MongodDB, Mongoose, след което ще видим как да създадеме добра абстракция над работата с данни. Курсът ще завърши с фреймуърка Express и ще създаваме уеб приложения.
 
 По време на курса ще има най-малко 3 практически уъркшопа и 4 демонстрации на живо, по време на които студентите ще могат да практикуват новия материал и да видят как да създават мощни и красиви приложения, използвайки Node.js.
- -->
+
+-->
 
 # Schedule
 
@@ -28,6 +29,7 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1.  Building Service Layer with Mongoose
 1.  _Live Demo:_ Building a RESTful API
 1.  _Workshop:_ Building a Web Application with Express
+1.  Unit testing with Mocha & Chai
 1.  Node.js tooling: Grunt, Gulp, Yeoman, Bower, NPM, debuggers, etc..
 1.  Running Node.js application in the cloud
 1.  _Live Demo:_ Building a SPA Application
@@ -55,4 +57,4 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1. _Live Demo:_ Изграждане на SPA Application
 1. _Workshop:_ Работа по курсовите проекти и консултации
 
- -->
+->
