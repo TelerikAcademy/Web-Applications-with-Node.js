@@ -31,8 +31,7 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1.  MVC Architecture in [Express](http://expressjs.com/) application (routers, views, controllers)
 1.  _Live Demo:_ Web apps with [Express](http://expressjs.com) & [Pug](https://github.com/pugjs/pug)
 1.  Authentication with [Passport](http://passportjs.org/)
-1.  Building a RESTful API
-1.  Creating Restful API with [Express](http://expressjs.com)
+1.  Building a RESTful API with [Express](http://expressjs.com)
 1.  _Workshop:_ Building a Web Application with [Express](http://expressjs.com)
 1.  Web Sockets with [Socket.IO](http://socket.io/)
 1.  Unit testing with [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [Karma](https://karma-runner.github.io/1.0/index.html)
@@ -42,22 +41,27 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1.  _Workshop:_ Creating course projects and consultations
 
 <!--
-1. Въведение в курса "Уеб приложения с Node.js"
-1. Въведение в Node.js
-1. Модули в Node.js
-1. IO в Node.js, Потоци
-1. Въведение в MongoDB
-1. MongoDB с Node.js
-1. MongoDB с Mongoose
-1. _Workshop:_ Работна с MongoDB
-1. Работа с Jade
-1. Въведение в Express
-1. MVC архитектура на приложение с Express (routers, views, controllers)
-1. _Live Demo: _ уеб приложения с ExpressJS & Jade
-1. Създаване RESTful API с Express
-1. Създаване на Service Layer с Mongoose
-1. _Live Demo:_ Изграждане на RESTful API
+1.  Въведение в курса "Уеб приложения с Node.js"
+1.  Въведение в Node.js
+1.  Модули в Node.js
+1.  IO в Node.js
+1.  Потоци (streams)
+1.  Въведение в MongoDB
+1.  MongoDB с Node.js
+1.  MongoDB с Mongoose
+1.  _Workshop:_ Работна с MongoDB
+1.  HTTP в Node.js
+1.  Асинхронни операции в Node.js
+1.  Създаване на Service Layer с Mongoose
+1.  Въведение в Pug
+1.  Въведение в Express
+1.  MVC архитектура на приложение с Express (routers, views, controllers)
+1.  _Live Demo: _ уеб приложения с ExpressJS & Pug
+1.  Автентикация с Passport
+1.  Изграждане на RESTful API с Express
 1. _Workshop:_ Изграждане на уеб приложения с Express
+1.  Web sockets с Socket.IO
+1.  Unit testing с Mocha, Chai и Karma
 1. Инструменти за работа с Node.js: Grunt, Gulp, Yeoman, Bower, NPM, дебъгери и т.н ..
 1. Node.js в облака
 1. _Live Demo:_ Изграждане на SPA Application
