@@ -1,17 +1,18 @@
-# Node.js Course Project
+# Course Project
+_Web applications with Node.js_
 
-This document describes the **course project assignment** for the **Node.js** course at Telerik Academy.
+This document describes the **course project assignment** for the [Web applications with Node.js course](telerikacademy.com/courses/courses/Details/400) at Telerik Academy.
 
 ## Project Description
 
-Design and implement an **End-to-end JavaScript application** using Node.js.  
+Design and implement a **Standard Web application** using [Node.js](http://nodejs.org), [Express](expressjs.com) and [MongoDB](https://www.mongodb.com/).  
+
 It can be a discussion forum, blog system, e-commerce site, online gaming site, social network, or any other web application by your choice.
 
-The application should have a:  
+The application should have a:
 
-* **public part** (accessible without authentication)
-* **private part** (available for registered users)
-* **administrative part** (available for administrators only).
+- **public part** (accessible without authentication)
+- **private part** (available for registered users)
 
 ### Public Part
 
@@ -23,59 +24,75 @@ This public part could be the application start page, application statistics, th
 **Registered users** should have personal area in the web application accessible after **successful login**.
 This area could hold for example the user's profiles management functionality, the user's offers in a bid system, the user's posts in a blog system, the user's photos in a photo sharing system, the user's contacts in a social network, etc.
 
-### Administration Part
-
-**System administrators** should have administrative access to the system and permissions to administer all major information objects in the system, e.g. to create / edit / delete users and other administrators, to edit/ delete offers in a bid system, to edit / delete photos and album in a photo sharing system, to edit / delete posts in a blogging system, edit / delete products and categories in an e-commerce system, etc.
-
-## General Requirements
+## Technical Requirements
 
 Your Web application should use the following technologies, frameworks and development techniques:
 
-* At least **10 different dynamic web pages**
-* Use **NodeJS** (with **Express**) for the server (use an **MV*** pattern)
-* Use **Jade** template engine for generating the UI
-* Use **MongoDB** as database back-end and **Mongoose (OR NOT)** to access your database
-	* Using Repository pattern/Unit of Work is not mandatory
-* Create at least **four tables with data** with **server-side paging** and **sorting**
-	* You may use **Kendo UI** Grid or generate your own HTML tables
-* Use responsive design
-	* It may be based on **Bootstrap**, **Materialize** or any other UI framework
-* Use **Passport** for managing **users** and **roles**
-	* Your registered users should have at least one of the two roles: **user** and **administrator**
-* Use at least **one AJAX form and/or WebSockets communication**
-* Write at least **20 unit tests** for your controllers logic
-* Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
-* Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
-	* Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
-* Use GitHub and take advantage of the **branches** for team collaboration.
-* Brief **documentation** of the project and the project architecture (as `.md` file)
+### Application Back-end (Server)
+
+- At least **5 different public dynamic web pages**
+  - Using [Pug](https://pugjs.org/)
+- At least **3 different private (authenticated) dynamic web pages**
+  - Using [Pug](https://pugjs.org/)
+- At least **5 different public RESTful routes** for AJAX
+- At least **1 private (authenticated) route** for AJAX
+- Use **Express** for the server
+  - Use an **MV-*** pattern
+- Use **MongoDB**
+  - As data storage
+  - Optionally, you may use **Mongoose** or any other ODM framework
+- Create a data/service layer for accessing the database
+- Use [Passport](http://passportjs.org/) - for managing **users**
+  - Your registered users should have at least one of the two roles: **user**
+
+### Application front-end (client)
+
+- Use any framework of your choice for the front-end
+  - Optional, not required
+  - KendoUI, AngularJS, Angular 2, Knockout, Bootstrap, etc...
+- implement responsive design
+  - It may be based on **Bootstrap**, **Materialize** or any other UI framework
+- Use at least **one AJAX form and/or WebSockets communication**
+- Write at least **10 different unit tests** for your controllers and data logic
+- Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
+- Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
+  - Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
+
+##  General Requirements
+
+- Use Git
+  - Github, Gitlab, Bitbucket, or other
+- Brief **documentation** of the project and the project architecture
+  - As `README.md` file at the root of the github repository
 
 ### Optional Requirements
 
-* Nice looking UI supporting of all modern and old Web browsers
-* Use **AngularJS** for the client-side (do not create single-page applications)
-* Good usability (easy to use UI)
-
-### Workflow
-
-Split the project tasks between the team members equally. Each member must be responsible for individual tasks. All of the team members must be educated about how the different modules are communicating with each other. You will be asked about functionalities that were implemented by another member of your team, so make sure you understand how the whole application works.
+- Nice looking UI supporting of all modern and old Web browsers
+- Good usability (easy to use UI)
+- Record a short video showcasing your application
+  - ~1-2 minutes, just show the interesting features
+  - Do not record register/login functionality, this is not interesting...
 
 ### Deliverables
 
-Put the following in a **ZIP archive** and submit it (**each team member** submits the same file):  
-
- * The **source code**
-	* **Don't submit the NPM packages**! They are not needed and take too much disk space.
- * The project documentation
+- Upload your application in the cloud
+  - MS Azure, HerokuCloud, Amazon, all are fine
+- Register your application at [Our Showcase System](http://best.telerikacademy.com)
+  - Link to the live application
+  - Link to the video
+  - Link to the github repository
 
 ### Public Project Defense
 
-Each team will have to make a **public defense** of its work in front of the trainers (for about 30 minutes), in which each of the team members will answer to the trainers questions individually.
+Each team will have to make a **public defense** of its work in front of a trainer (for about 30 minutes), in which each of the team members will answer to the trainer's questions individually.
+
 The public defense includes:
 
-* Live **demonstration** of the developed web application (prepare sample data).
-* Explain application structure and its back-end and front-end **source code**
-* Show the **commit logs** in the source control repository to prove a contribution from all team members.
+- Live **demonstration** of the developed web application (prepare sample data).
+- Explain application structure and its back-end and front-end **source code**
+- Show the **commit logs** in the source control repository to prove a contribution from all team members.
+- May include a simple task for each team member
+  - The task must be implemented immediately
 
 ### Give Feedback about Your Teammates
 
