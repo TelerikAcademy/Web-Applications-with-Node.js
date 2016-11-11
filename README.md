@@ -44,27 +44,36 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 1.  Въведение в курса "Уеб приложения с Node.js"
 1.  Въведение в Node.js
 1.  Модули в Node.js
+
 1.  IO в Node.js
 1.  Потоци (streams)
 1.  Въведение в MongoDB
+
 1.  MongoDB с Node.js
 1.  MongoDB с Mongoose
 1.  _Workshop:_ Работна с MongoDB
+
 1.  HTTP в Node.js
 1.  Асинхронни операции в Node.js
 1.  Създаване на Service Layer с Mongoose
+
 1.  Въведение в Pug
 1.  Въведение в Express
 1.  MVC архитектура на приложение с Express (routers, views, controllers)
+
 1.  _Live Demo: _ уеб приложения с ExpressJS & Pug
 1.  Автентикация с Passport
 1.  Изграждане на RESTful API с Express
+
 1. _Workshop:_ Изграждане на уеб приложения с Express
 1.  Web sockets с Socket.IO
 1.  Unit testing с Mocha, Chai и Karma
+
 1. Инструменти за работа с Node.js: Grunt, Gulp, Yeoman, Bower, NPM, дебъгери и т.н ..
 1. Node.js в облака
 1. _Live Demo:_ Изграждане на SPA Application
+
 1. _Workshop:_ Работа по курсовите проекти и консултации
+
 
 -->
