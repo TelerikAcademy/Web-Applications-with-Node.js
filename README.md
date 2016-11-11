@@ -13,26 +13,32 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 
 # Schedule
 
-1.  Course Introduction
-1.  Introduction to Node.js
+1.  ["Web applications with Node.js"](http://telerikacademy.com/Courses/Courses/Details/400) course introduction
+1.  Introduction to [Node.js](http://nodejs.org)
 1.  Modules
-1.  IO in Node.js, Streams
-1.  MongoDB Overview
-1.  MongoDB with Node.js
-1.  MongoDB with Mongoose
-1.  _Workshop:_ Working with MongoDB
-1.  Jade overview
-1.  Express Overview
-1.  MVC Architecture in Express Application (Routers, Views, Controllers)
-1.  _Live Demo:_ Web apps with ExpressJS & Jade
-1.  Creating Restful API with Express
-1.  Building Service Layer with Mongoose
-1.  _Live Demo:_ Building a RESTful API
-1.  _Workshop:_ Building a Web Application with Express
-1.  Unit testing with Mocha & Chai
-1.  Node.js tooling: Grunt, Gulp, Yeoman, Bower, NPM, debuggers, etc..
+1.  IO in Node.js
+1.  Streams in Node.js
+1.  [MongoDB](https://www.mongodb.com/) overview
+1.  [MongoDB](https://www.mongodb.com/) with Node.js
+1.  [MongoDB](https://www.mongodb.com/) with [Mongoose](http://mongoosejs.com/)
+1.  _Workshop:_ Working with [MongoDB](https://www.mongodb.com/)
+1.  HTTP in Node.js
+1.  Asynchronous programming in Node.js
+1.  _Workshop:_ HTTP & Async
+1.  Building Service Layer with [Mongoose](http://mongoosejs.com/)
+1.  [Pug](https://github.com/pugjs/pug) overview (formally Jade)
+1.  [Express](http://expressjs.com/) overview
+1.  MVC Architecture in [Express](http://expressjs.com/) application (routers, views, controllers)
+1.  _Live Demo:_ Web apps with [Express](http://expressjs.com) & [Pug](https://github.com/pugjs/pug)
+1.  Authentication with [Passport](http://passportjs.org/)
+1.  Building a RESTful API
+1.  Creating Restful API with [Express](http://expressjs.com)
+1.  _Workshop:_ Building a Web Application with [Express](http://expressjs.com)
+1.  Web Sockets with [Socket.IO](http://socket.io/)
+1.  Unit testing with [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [Karma](https://karma-runner.github.io/1.0/index.html)
+1.  Node.js tooling: [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/), [Yeoman](http://yeoman.io/), [Bower](https://bower.io/), [NPM](https://www.npmjs.com/), debuggers, etc..
 1.  Running Node.js application in the cloud
-1.  _Live Demo:_ Building a SPA Application
+1.  _Live Demo:_ Building a [SPA Application](https://en.wikipedia.org/wiki/Single-page_application)
 1.  _Workshop:_ Creating course projects and consultations
 
 <!--
