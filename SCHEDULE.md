@@ -1,4 +1,4 @@
-<meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
+<!-- <meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
 <meta content="Excel.Sheet" name="ProgId" />
 <meta content="Microsoft Excel 15" name="Generator" />
 <link href="COURSE_SCHEDULE-PATTERNS_files/filelist.xml" rel="File-List" />
@@ -306,7 +306,7 @@
     --&amp;
     gt;
 </style>
-
+-->
 <div align="center" id="COURSE_SCHEDULE_16702" x:publishsource="Excel">
     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;table-layout:fixed;width:653pt;" width="867">
         <colgroup>
