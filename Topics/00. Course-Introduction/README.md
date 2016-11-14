@@ -24,18 +24,17 @@
 ## Easily creating web apps/servers
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
-# The Web Applications with Node.js
-- **The Web Applications with Node.js** Course
-  - The next JavaScript course
+# Web Applications with Node.js
+- [**The Web Applications with Node.js**](http://telerikacademy.com/Courses/Courses/Details/400) Course
   - Continuation of [JavaScript applications](http://telerikacademy.com/Courses/Courses/Details/350)
   - Creating web applications using JavaScript and Node.js
 - Lectures 5 times a week
-  - from Monday to Friday
-  - Average 6 hours lectures and workshops per day
+  - From Monday to Friday
+  - Average `6` hours lectures and workshops per day
+  - `~50` hours of presentations
+  - `~40` hours of workshops
 - The course evaluation?
   - Course project
-  - Teams of 5
-    - You choose your teammates!
   - Creating a Web application with Node.js
 
 <!-- section start -->
@@ -43,7 +42,7 @@
 # Topics in "Web Applications with Node.js"
 ## What Will We Cover in the Course?
 
-<!-- attr: { hasScriptWrapper:true, style:'font-size:0.5em' } -->
+<!-- attr: { hasScriptWrapper:true, style: "font-size: 0.9em" } -->
 # Topics in "Web Applications with Node.js"
 
 - Basics of Node.js
@@ -53,33 +52,38 @@
   - MongoDB & Mongoose
   - Building service layer
 - Creating web applications
-  - Express, Jade, MVC
+  - Express, Pug, MVC, Web Sockets
 - Unit testing
-  - Mocha & Chai
+  - Mocha, Chai, Karma
 
 <!-- section start -->
 <!-- attr: {id: 'evaluation', class: 'slide-section'} -->
 # Course Evaluation
+##  Points, points, points...
 
-<!-- attr: { style:'font-size:0.9em' } -->
 # Course Evaluation
 - Course Evaluation
-  - **Course Project** – up to `75%`
-  - **Homework** – up to `10%`
+  - **Course Project** – up to `65%`
+    - Each team member may get a part of the whole project, based on their participation
+  - **Homework** – up to `15%`
   - **Homework evaluation** – up to `5%`
-  - **Workshop participation** - up to `10%`
+  - **Workshop participation** - up to `15%`
 
-# Course Project
+  <!-- attr: { style:'font-size:0.75em' } -->
+# The Course Project
 
-- Build a finished application using Node.js, Express and MongoDB
-  - The application must be standard web application (i.e. no SPA application)
+- Build a web application with Express and MongoDB
+  - The application must be standard web application
+    - i.e. no SPA application
   - Must have AJAX calls
   - Must be hosted in a cloud
     - MS Azure, Amazon AWS, HerokuCloud or others
-  - Full course project description [here](http://)
+  - Full course project description [here](https://github.com/TelerikAcademy/Web-Applications-with-Node.js/tree/master/Course%20Project)
 - Teams of 5
   - You choose your teammates
-  - Choose them until 16 Nov 2016
+    - On site participants: until 10:00, 16 Nov 2016
+    - Live participants: until 10:00, 18 Nov 2016
+    - Fill the form [here](https://goo.gl/forms/hOQg9O1laMDIFTo13)
   - The evaluation will consist of:
     - Course project evaluation
     - Each team member will be evaluated individually
@@ -121,7 +125,6 @@
   -  Presence cards with barcode
   -  Reports about your results
 -  [Course site](http://telerikacademy.com/Courses/Courses/Details/400)
-
 
 # Node.js Useful Links
 -  [http://nodejs.org/](http://nodejs.org/) - NodeJS official web site
