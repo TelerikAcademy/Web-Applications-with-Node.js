@@ -1,0 +1,28 @@
+# ExpressJS Overview
+
+- ExpressJS Overview
+  - App initialization
+  - Simple routes
+- **Middlewares**
+  - What is a Middleware?
+  - Using middlewares
+  - Custom middlewares
+    - **Application-level** middlewares
+    - **Route-level** middlewares
+  - Useful third-party middlewares
+    - `passport` for authentication
+    - `body-parser` for parsing JSON
+- Requests and responses
+  - The **request** object
+  - The **response** object
+  - Response types
+    - Views
+    - String
+    - JSON
+- **Routes** and **Routers**
+- `app.route()`
+- `express.Router()`
+- Types of Routes
+  - Views (Templates)
+  - Plain string
+  - Pattern
