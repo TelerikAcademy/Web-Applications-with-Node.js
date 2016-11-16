@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Get a connection string
 const mongoDbConnectionString = 'mongodb://localhost:27017/computers';
 
@@ -21,18 +22,21 @@ db.on('open', () => {
 // ========================================
 //              Using schemas
 // ========================================
-// const modelSchema = mongoose.Schema({
-//     model: String,
-//     releaseDate: Date,
-//     priceInDollars: Number,
-//     displaySizeInInches: Number
-// });
-// const modelName = 'Laptop';
-// const Laptop = mongoose.model(modelName, modelSchema);
+
+const modelSchema = mongoose.Schema({
+    model: String,
+    releaseDate: Date,
+    priceInDollars: Number,
+    displaySizeInInches: Number
+});
+const modelName = 'Laptop';
+
+const Laptop = mongoose.model(modelName, modelSchema);
+
 // const asus = new Laptop({
 //     model: 'Asus G752',
 //     releaseDate: new Date(2016, 10, 29),
-//     priceInDollars: 1799,
+//     priceInDollars: 'fasfafsa',
 //     displaySizeInInches: 17.3
 // });
 
@@ -70,27 +74,28 @@ db.on('open', () => {
 // ========================================
 //          Using instance methods
 // ========================================
-const laptopSchema = mongoose.Schema({
-    model: String,
-    releaseDate: Date,
-    priceInDollars: Number,
-    displaySizeInInches: Number
-});
+// const laptopSchema = mongoose.Schema({
+//     model: String,
+//     releaseDate: Date,
+//     priceInDollars: Number,
+//     displaySizeInInches: Number
+// });
 
-// Instance methods don't work with arrow functions because of the nature of 'this' keyword
-laptopSchema.methods.getDetailedDescription = function () {
-    const productDescription =
-        `Product description:
-        Model: ${this.model}
-        Release date: ${this.releaseDate}
-        Price: ${this.priceInDollars}$
-        Display size: ${this.displaySizeInInches}''`;
+// // Instance methods don't work with arrow functions because of the nature of 'this' keyword
+// laptopSchema.methods.getDetailedDescription = function () {
+//     const productDescription =
+//         `Product description:
+//         Model: ${this.model}
+//         Release date: ${this.releaseDate}
+//         Price: ${this.priceInDollars}$
+//         Display size: ${this.displaySizeInInches}''`;
 
-    return productDescription;
-};
+//     return productDescription;
+// };
 
-const modelName = 'Laptop';
-const Laptop = mongoose.model(modelName, laptopSchema);
+// const modelName = 'Laptop';
+// const Laptop = mongoose.model(modelName, laptopSchema);
+
 // const asus = new Laptop({
 //     model: 'Asus G752',
 //     releaseDate: new Date(2016, 10, 29),
@@ -100,6 +105,29 @@ const Laptop = mongoose.model(modelName, laptopSchema);
 
 // asus.save((err, entry) => {
 //     console.log(entry.getDetailedDescription());
+// });
+
+// ========================================
+//     Working with virtual properties
+// ========================================
+
+// const hamsterSchema = mongoose.Schema({
+//     name: String,
+//     kolibka: { type: Number, required:true, min: 10, max: 60}
+// });
+
+// hamsterSchema.virtual('CurrentDate').get(function(){
+//     return Date.now();
+// });
+
+// const Hamster = mongoose.model('Hamster', hamsterSchema);
+// const hamsterObject = new Hamster({
+//     name: 'Pesho',
+//     kolibka: 30
+// });
+
+// hamsterObject.save((err, savedHamster)=> {
+//     console.log(savedHamster.CurrentDate);
 // });
 
 // ========================================
@@ -114,41 +142,47 @@ const Laptop = mongoose.model(modelName, laptopSchema);
 //     console.log(laptops);
 // });
 
-// const productId = '582a47ad03315e2df05fe196';
+const productId = '582ae9dea411eb534839a7ec';
 // const filter = {
-//     _id: productId
+//     priceInDollars: { $gt: 1200, $lt: 1600}
 // };
 
 // Laptop.find(filter, (err, laptops) => {
 //     for(let i = 0; i< laptops.length; i+=1){
-//         console.log(laptops[i].getDetailedDescription());
+//         console.log(laptops[i]);
 //     }
 // });
+
+// Laptop.findByIdAndUpdate(
+//     productId,
+//     { $set: { priceInDollars: 1500 } },
+//     { new: true },
+//     (err, result) => {
+//         console.log(result);
+//     })
 
 // Laptop.findById(productId, (err, laptop) => {
 //     console.log(laptop.getDetailedDescription());
 // });
 
-// Laptop.find()
-//     .where({
-//         model: new RegExp('Asus', 'i')
-//     })
-//     .and({
-//         priceInDollars: {
-//             $lt: 3000,
-//             $gt: 1600
-//         }
-//     })
-//     .sort({
-//         priceInDollars: 'desc'
-//     })
-//     .limit(3)
-//     .exec((err, results) => {
-//         for (let i = 0; i < results.length; i += 1) {
-//             console.log(results[i].getDetailedDescription());
-//         }
-//     });
+const query = Laptop.find()
+    .where({
+        model: new RegExp('asus', 'i')
+    })
+    .and({
+        priceInDollars: {
+            $lt: 3000,
+            $gt: 1600
+        }
+    })
+    .sort({
+        priceInDollars: 'desc'
+    })
+    .skip(3)
+    .limit(3);
 
+
+query.exec();
 
 // ========================================
 //       Built-in Property Validators
@@ -156,6 +190,7 @@ const Laptop = mongoose.model(modelName, laptopSchema);
 
 // const productNumberMatch = /[a-zA-Z1-9]/;
 // const displaySizes = ['13', '15.6', '17.3', '18', '21'];
+
 // var complexLaptopSchema = mongoose.Schema({
 //     model: String,
 //     productNumber: {
@@ -174,7 +209,11 @@ const Laptop = mongoose.model(modelName, laptopSchema);
 //         required: false,
 //         min: 5,
 //         max: 25
-//     } // Number validator
+//     }, // Number validator
+//     releaseDate: {
+//         type: Date,
+//         default: Date.now
+//     }
 // });
 
 // ========================================
@@ -187,6 +226,33 @@ const Laptop = mongoose.model(modelName, laptopSchema);
 //     },
 //     'String must be between 1 and 60 characters long'
 // ];
+
+// const numberValidator = [
+//     function (val) {
+//         return ((val % 2) === 0);
+//     },
+//     'The number assigned is odd. Only even numbers allowed'
+// ]
+
+// const numbersSchema = mongoose.Schema({
+//     value: {
+//         type: Number,
+//         required: true,
+//         validate: function (v) {
+//             return v % 2 === 0;
+//         }
+//     }
+// });
+
+// const Num = mongoose.model('Num', numbersSchema);
+// const myNum = new Num({
+//     value: 3
+// });
+
+// myNum.save((err, result) => {
+//     console.log(err);
+//     console.log(result);
+// })
 
 // var personSchema = new Schema({
 //     firstName: {
