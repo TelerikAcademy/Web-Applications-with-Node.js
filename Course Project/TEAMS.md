@@ -2,7 +2,7 @@
 
 # On-site teams
 
-[![OnsiteTeams.png](https://s17.postimg.org/zd5232mz3/Onsite_Teams.png)](https://postimg.org/image/k4f4pataj/)
+[OnsiteTeams.png](https://postimg.org/image/k4f4pataj/)
 
 # Online teams
 
