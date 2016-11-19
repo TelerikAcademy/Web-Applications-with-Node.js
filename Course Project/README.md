@@ -17,37 +17,51 @@ The application should have a:
 ### Public Part
 
 The **public part** of your projects should be **visible without authentication**.
-  - Using [Pug](https://pugjs.orghttps://goo.gl/forms/hOQg9O1laMDIFTo13
-- Use **MongoDB**  - Using [Pug](https://pugjs.orghttps://goo.gl/forms/hOQg9O1laMDIFTo13
+This public part could be the application start page, application statistics, the user login and user registration forms, as well as the public data of the users, e.g. the blog posts in a blog system, the public offers in a bid system, the products in an e-commerce system, etc.
 
+### Private Part (Registered users area)
+
+**Registered users** should have personal area in the web application accessible after **successful login**.
+This area could hold for example the user's profiles management functionality, the user's offers in a bid system, the user's posts in a blog system, the user's photos in a photo sharing system, the user's contacts in a social network, etc.
+
+## Technical Requirements
+
+Your Web application should use the following technologies, frameworks and development techniques:
+
+### Application Back-end (Server)
+
+- At least **5 different public dynamic web pages**
+  - Using [Pug](https://pugjs.org/)
+- At least **3 different private (authenticated) dynamic web pages**
+  - Using [Pug](https://pugjs.org/)
+- At least **5 different public RESTful routes** for AJAX
+- At least **1 private (authenticated) route** for AJAX
+- Use **Express** for the server
+  - Use an **MV-*** pattern
+- Use **MongoDB**
   - As data storage
   - Optionally, you may use **Mongoose** or any other ODM framework
 - Create a data/service layer for accessing the database
 - Use [Passport](http://passportjs.org/) - for managing **users**
   - Your registered users should have at least one of the two roles: **user**
 
-### Application front-end (client) - **up to 35%**
+### Application front-end (client)
 
 - Use any framework of your choice for the front-end
   - Optional, not required
   - KendoUI, AngularJS, Angular 2, Knockout, Bootstrap, etc...
-- Implement responsive design
+- implement responsive design
   - It may be based on **Bootstrap**, **Materialize** or any other UI framework
-- Use AJAX with the AJAX routes from the server
-- Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
+- Use at least **one AJAX form and/or WebSockets communication**
 - Write at least **10 different unit tests** for your controllers and data logic
+- Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
 - Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
   - Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
-
-### Application Creativity - **up to 10%**
-
-- Think of a innovative application
-  - Not yet another blog system, forum, pseudo-imdb, or something similar or boring
 
 ##  General Requirements
 
 - Use Git
-  - Github, GitLab, Bitbucket, or other
+  - Github, Gitlab, Bitbucket, or other
 - Brief **documentation** of the project and the project architecture
   - As `README.md` file at the root of the github repository
 
