@@ -19,7 +19,7 @@ You must create a database called **TelerikFriends**. The database will have onl
  - Items for sale (which must be an array of items which are sold or granted as a present for free). Each of the Items for sale must have the following data fields:
    - **(\*required)** Item name (a string which contains only uppercase and lowercase letters)
    - Item price (must be a number)
-   - **(\*required)** Give away status (must always be one of the String values found in the enum **['Give away', 'For Sale'])**
+   - **(\*required)** Offer type (must always be one of the String values found in the enum **['Give away', 'For Sale'])**
    - **(\*required)** Offer start date (type Date with default value Date.now)
    - **(\*required)** Offer end date (type Date and cannot be a date previous than **Offer start date**, with default value Date.now + 1 month)
  - Items received (an Array of strings, which contains the Items names)
