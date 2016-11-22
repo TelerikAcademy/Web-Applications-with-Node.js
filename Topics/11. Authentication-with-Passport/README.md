@@ -257,7 +257,7 @@ app.get('/unauthorized', (req, res) => {
 
 <!-- attr: { class: 'slide-section', showInPresentation: true } -->
 <!-- # Using a third-party provider -->
-## [Demo]()
+## [Demo](./demos/authentication-with-github)
 
 <!-- section start -->
 <!-- attr: { class: 'slide-section', showInPresentation: true } -->
