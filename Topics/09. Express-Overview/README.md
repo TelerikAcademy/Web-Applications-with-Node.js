@@ -1,296 +1,195 @@
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
+
 # ExpressJS
 ## Web development with ExpressJS
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic00.png" style="top:50.80%; left:58.22%; width:34.33%; z-index:-1" /> -->
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic01.png" style="top:17.98%; left:3.56%; width:59.60%; z-index:-1" /> -->
+
 <article class="signature">
-	<p class="signature-course">End-to-end JavaScript Applications</p>
+	<p class="signature-course">Web applications with JavaScript</p>
 	<p class="signature-initiative">Telerik Software Academy</p>
 	<a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </article>
 
 <!-- attr: { id:'', showInPresentation:true, hasScriptWrapper:true } -->
 # Table of Contents
-- Middleware
-- ExpressJS
-- Views and layout
-- Working with Data
-- Common and Advanced Scenarios
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic02.png" style="top:15.38%; left:72.93%; width:30.91%; z-index:-1" /> -->
-
+- Express Overview
+  - Routes
+  - Middlewares
+  - Views
+  - Working with Data
 
 <!-- section start -->
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# node.js
-- Event-Driven, Asynchronous IO, Server-Side JavaScript library in C
-- Open Source
-- Available on
-  - Windows
-    - Service
-    - Under IIS (iisnode)
-  - *nix systems
-- As a service
-  - Azure
-  - Heroku
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic03.png" style="top:28.14%; left:58.94%; width:39.47%; z-index:-1" /> -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style: "font-size: 0.9em" } -->
+# Express
 
+- Express is a framework for creating web applications with Node.js
+  - Like the ASP.NET to C#, Spring MVC to Java, etc...
+  - Runs a web server
+    - The web server handles requests and sends responses
+- Supports middlewares
+  - To do stuff before and after each request
+  - Has built-in and third-party
+  - You can write your own
+- Supports lots of view engines
+  - Pug being the preferred
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# NodeJS Web Server
-- Basic server implementation
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style: "font-size: 0.9em" } -->
+# Running an Express App
 
-```javascript
-var http = require('http');
+- To run an application with Express:
+  1.  `$ npm install --save express`
+  2.  Initialize your `app.js`
+    ```js
+    const express = require("express");
 
-http.createServer(function(req, res) {
-    res.writeHead(200, {
-        'Content-Type': 'text/plain'
-    }); //return success header
+    let app = express();
 
-    res.write('My server is running! ^_^'); //response
-    res.end(); //finish processing current request
-}).listen(1234);
-```
+    app.get("/", (req, res) => {
+        res.send("It works!");
+    });
 
+    app.listen(3000, () => console.log(`App running at :3000`));
+    ```
+  3.  `$ node app.js`
 
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Middleware for NodeJS
-- Connect is a middleware framework for node
-  - Built on top of node’s Http Server
-  - http://www.senchalabs.org/connect/
-
-```javascript
-$ npm install connect
-```
-```javascript
-var connect = require('connect');
-
-var app = connect()
-  .use(connect.logger('dev'))
-  .use(connect.static('public'))
-  .use(function(req, res){
-    res.end('hello world\n');
-  })
-
-http.createServer(app).listen(3000);
-```
-
-
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Connect Middleware
-- Request Processing Pipeline
-
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic09.png" style="top:32.64%; left:10%; width:80%; z-index:-1" /> -->
-
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Connect for NodeJS – _Example_
-- Custom middleware function for connect
-
-```javascript
-var connect = require('connect'),
-    util = require('util');
-
-var interceptorFunction = function(request, response, next) {
-    console.log(util.format('Request for %s with method %s',
-        request.url, request.method));
-    next();
-};
-
-var app = connect()
-    // .use('/log', interceptorFunction)
-    .use(interceptorFunction)
-    .use(function onRequest(request, response) {
-        response.end('Hello from Connect!');
-    }).listen(3001);
-```
-
+<!-- attr: {class: 'slide-section'} -->
+# Running 101 Express App
+## [Demo](http://)
 
 <!-- section start -->
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Express.js 4.0
-- Has middleware built-in
-- Adds functionality to the normal server
-  - Request / Response enhancements
-  - Routing
-  - View Support
-  - HTML Helpers
-  - Content Negotiation
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic04.png" style="top:32.64%; left:52.61%; width:54.45%; z-index:-1" /> -->
 
+<!-- attr: {style: "font-size: 0.9em"} -->
+# Routes in Express
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Basic Architecture
+- Express is a web development framework
+  - It must support a way to define/create different pages
+    - i.e. a way for the user to request different page
+    - Also called routes
 
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic10.png" style="top:24%; left:20%; width:60%; z-index:-1" /> -->
+- Express supports the `4` most used routes:
+  - `app.get(url, cb)`
+  - `app.post(url, cb)`
+  - `app.put(url, cb)`
+  - `app.delete(url, cb)`
 
+# Routes in Express
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# First Express App
+- Routes in express have `2` parameters:
+  - `url` - a relative path to the resource/page
+  - `callback` - function, called when the route is reached:
+    - The callback takes `2` parameters
+      - `request` - holds information about the request
+        - headers, agent, body, etc...
+      - `response` - used to return a response to the client
+        - body, headers, cookies, etc...
 
-```javascript
-var express = require('express');
+# Routes in Express
 
-var app = express();
+- A `GET` route with Express
 
-app.get('/', function (request, response) {
-    response.send('Welcome to Express!');
-});
-
-app.get('/customer/:id', function (req, res) {
-    res.send('Customer requested is ' + req.params['id']);
-});
-
-app.listen(3000);
-```
-
-
-
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Demo: Creating Express Applications
-- Simple ExpressJS application and "nodemon"
-- Create routes and require() them
-- Pass parameters
-- Configure middleware
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic05.png" style="top:6.69%; left:13.23%; width:82.33%; z-index:-1" /> -->
-
-
-
-<!-- section start -->
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Views in ExpressJS
-- User Interface
-- Based on Templates
-- Support for multiple View Engines
-  - Jade, EJS, JSHtml, . . .
-- Default is Jade
-  - http://jade-lang.com
-
-```javascript
-app.get('/', function (req, res) {
-    res.render('index');
+```js
+app.get('/', (request, response) => {
+  //  1.  handle the request from the server
+  console.log(request.headers);
+  //  2.  return a response
+  response.send("It works!");
+  //    response.render("index", model);
+  //    response.sendfile(pathToFile);  
 });
 ```
 
+<!-- attr: {style: "font-size:0.8em"} -->
+#   Routes in Express: _Example_
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Views in ExpressJS – _Example_
+- Create an application, that has three routes:
+  - Get all superheroes
+  - Get details about a superhero
+  - Add a new superhero
 
-```javascript
-var express = require('express'),
-    path = require('path');
-var app = express();
-app.configure(function () {
-    app.set('views', __dirname + '/views');
-    app.set('view engine', 'jade');
-    app.use(express.static(path.join(__dirname, 'public')));
-});
-app.get('/', function (req, res) {
-    res.render('empty');
-});
-app.listen(3000);
-```
+  ```js
+  app.get("/", (req, res) => {
+    res.send(superheroes);
+  });
 
+  app.get("/:id", (req, res) => {
+    res.send(superheroes[req.params.id]);
+  });
 
-```javascript
-doctype
-html(lang="en")
-  head
-    title Welcome to this emtpy page
-  body
-```
+  app.post("/", (req, res) => {
+    let superhero = req.body;
+    superhero.id = superheroes.length;
+    superheroes.push(superhero)
+    res.send(superhero);
+  });
+  ```
 
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Demo: Views in ExpressJS
-- Show simple views in ExpressJS
-- Jade syntax examples
-- Layouts and blocks
-- Stylus
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic06.png" style="top:8.00%; left:30.20%; width:48.88%; z-index:-1" /> -->
-
-
+<!-- attr: {class: "slide-section"} -->
+# Routes in Express
+##  [Demo](http://)
 
 <!-- section start -->
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:"font-size:0.75em" } -->
-# Working with Data
-- Pass data to the views
 
-```javascript
-res.render('index', { title: 'Customer List' });
+<!-- attr: {class: "slide-section"} -->
+# Express with Pug
+##  Generating views out-of-the-box
+
+# Express with Pug
+
+- Express has built-in support for some view engines
+  - Including [Pug](https://github.com/pugjs/pug)
+- Just set the `view engine` setting and use `res.render(pathToView)`:
+
+```js
+app.set("view engine", "pug");
+app.get("/",(req, res) => {
+  res.render("superheroes-list", superheroes);
+});
 ```
-- Read data from the views (bodyParser)
-
-```javascript
-res.render('index', { title: 'Customer List' });
-```
-- Read and send files
-
-```javascript
-var filePath = req.files.picture.path;
-// ...
-res.download(filePath);
-res.sendfile(filePath);
-```
-- Data for all views
-
-```javascript
-app.locals.clock = { datetime: new Date().toUTCString()};
-```
-
-
-
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Demo: Working with data
-- Pass data to views (customer.index)
-- Submit data from views (customer.create)
-- Content negotiation (customer.details)
-- Upload files (customer.create)
-- Helpers (app.locals)
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic07.png" style="top:5.12%; left:34.29%; width:41.07%; z-index:-1" /> -->
-
-
 
 <!-- section start -->
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
-# Demo: Advanced Scenarios
-- Cookies
-- Sessions
-- Custom middleware
-- Authentication and authorization
-<!-- <img class="slide-image" showInPresentation="true" src="imgs\pic08.png" style="top:6.44%; left:33.46%; width:42.73%; z-index:-1" /> -->
 
+<!-- attr: {class: "slide-section"}  -->
+# Middlewares in Express
+##  Extending Express
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-# Next Steps
-- Express.js Samples
-  - https://github.com/visionmedia/express
-- Database Support
-  - MS SQL
-  - CouchDB
-  - PostgreSQL
-  - Redis
-- Socket.io
-  - Real-time support
+# Middlewares in Express
 
+- Middleware is a callback that is executed "between" other executions
+  - i.e. a function that is executed before each request
+- How to attach a middleware?
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # Next Steps -->
-- Search on npm.org before you re-invent the wheel
-- Express is Lightweight Framework and Fast to work with
-- Testing is not optional
-  - Mocha
-- JavaScript can get messy
+  ```js
+    app.use((req, res, done) => {
+      //  do your stuff here
+      done();
+    });
+  ```
 
+  - Mandatory call `done()` at the end, otherwise the request will not continue and will timeout
+
+# Middlewares in Express
+
+- There are many built-in and third-party middlewares
+  - [Morgan](https://github.com/expressjs/morgan)
+    - A logging middleware
+
+      ```js
+      app.use(morgan('combined'));
+      ```
+
+  - Express.static
+    - Servers static files (css, js, imgs, etc)
+
+      ```js
+      app.use("static", express.static(pathToDirWithStaticFiles));
+      ```
+
+<!-- attr: {class: "slide-section"} -->
+# Middlewares in Express
+##  [Demo](http://)
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# ExpressJS
+# Express
 ## Questions?
 ## http://academy.telerik.com
-
-
-
-
