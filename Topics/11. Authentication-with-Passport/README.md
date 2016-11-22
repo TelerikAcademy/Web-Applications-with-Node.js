@@ -1,6 +1,6 @@
 <!-- section start -->
 <!-- attr: { id:'title', class:'slide-title', hasScriptWrapper:true } -->
-# Passport.js
+# Passportjs
 ## Implementing Authentication and Authorization
 
 <div class="signature">
@@ -10,14 +10,15 @@
 </div>
 
 <!-- section start -->
-
 # Table of Contents
 - Why bother with authentication and authorization?
-- What is Passport.js?
-- Why use Passport.js?
+- What is Passportjs?
+- Why use Passportjs?
 - Setting up Passport
     - Local strategy
-    - Other strategies
+- OAuth and OAuth providers
+    - Quick explanation
+    - Using a third-party provider
 
 
 <!-- section start -->
@@ -46,19 +47,19 @@
 
 <!-- section start -->
 <!-- attr: { class: 'slide-section', showInPresentation: true } -->
-<!-- # Passport.js
+<!-- # Passportjs
 ## What is Passport, why use it -->
 
 <!-- attr: { style: 'font-size: 0.9em' } -->
-# What is Passport.js
-- **Passport.js** is an authentication middleware for Node.js
-- **Passport.js** is an open source library
+# What is Passportjs
+- **Passportjs** is an authentication middleware for Node.js
+- **Passportjs** is an open source library
     - [Public repository](https://github.com/jaredhanson/passport)
 - Provides many authentication strategies
     - _Examples_: Local, OpenID, Facebook, GitHub, etc
 
 <!-- attr: { style: 'font-size: 0.95em' } -->
-# Why use Passport.js
+# Why use Passportjs
 - **Modular** - use only what you need, nothing more
 - **Ease of use** - integration in an application is easy
 - **Rich choice** of authentication strategies
@@ -66,7 +67,7 @@
 - **Combine strategies** - developers can use multiple strategies for the same application
 
 <!-- attr: { style: 'font-size: 0.95em' } -->
-# Why use Passport.js
+# Why use Passportjs
 - **Unopinionated** - can be used with any data storage/client
 - **Open source** - you can always take a read through the source code
 - **Small codebase** - simple, easy to read, easy to configure
@@ -79,7 +80,7 @@
 
 <!-- attr: { style: 'font-size: 0.8em' } -->
 # Getting Passport
-- **Passport.js** is a **npm package**
+- **Passportjs** is a **npm package**
     - this is the core module
     - install with
 ```
@@ -225,3 +226,45 @@ app.get('/unauthorized', (req, res) => {
 ## [Demo](./demos/app.js)
 
 <!-- section start -->
+<!-- attr: { class: 'slide-section', hasScriptWrapper: true, showInPresentation: true } -->
+# OAuth and OAuth providers
+## Facebook, Twitter, GitHub, etc
+
+# OAuth
+- **OAuth** is an authentication protocol
+    - Allows users to authenticate themselves in applications without sharing their credentials
+- **OAuth** authentication is done using a thirdy-party **provider**
+- _Example_: sign in pastebin.com with Facebook, Twitter or Google account
+
+# How does OAuth work?
+1. The client performs a login request to the server
+1. The client will be redirected to the provider
+1. Login with the provider on the provider's web page
+1. The provider will issue the client a token
+1. The client will be redirected back to the server
+1. The token from the provider will be used for authentication
+
+# OAuth with Passportjs
+- Passport supports **OAuth 1.0** and **OAuth 2.0**
+- Passport also has a rich set of **OAuth** provider strategies
+    - Facebook, GitHub, LinkedIn, Google, etc
+- Browse the strategies at http://passportjs.org/
+
+<!-- attr: { class: 'slide-section' } -->
+# Using a third-party provider
+## [Demo]()
+
+<!-- section start -->
+<!-- attr: { class: 'slide-section', showInPresentation: true } -->
+<!-- # Authentication with Passportjs
+## Questions? -->
+
+<!-- attr: { showInPresentation: true, hasScriptWrapper: true} -->
+# Free Training @ Telerik Academy
+
+- Web Applications with Node.js
+    - [official page](http://academy.telerik.com/student-courses/software-technologies/web-applications-with-node-js/about)
+- Telerik Academy @ Facebook
+    - [facebook.com/TelerikAcademy](https://facebook.com/TelerikAcademy)
+- Telerik Academy Learning System
+    - [telerikacademy.com](https://telerikacademy.com)
