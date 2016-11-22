@@ -1,0 +1,10 @@
+extends _layout
+
+block site-title
+    | Create
+block content
+    form(method="post" action="/superheroes")
+        label
+            | Name:
+            input(type="text" name="name")
+        input(type="submit" value="Create")

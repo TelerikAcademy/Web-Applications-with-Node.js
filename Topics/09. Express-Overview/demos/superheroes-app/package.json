@@ -1,0 +1,18 @@
+{
+  "name": "superheroes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.8",
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
