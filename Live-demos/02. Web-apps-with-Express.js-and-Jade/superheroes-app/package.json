@@ -1,0 +1,22 @@
+{
+    "name": "superheroes-app",
+    "version": "1.0.0",
+    "description": "4",
+    "main": "index.js",
+    "scripts": {
+        "dev": "./node_modules/.bin/nodemon app.js",
+        "postinstall": "./node_modules/.bin/bower install"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "bower": "^1.8.0",
+        "express": "^4.14.0",
+        "mongoose": "^4.6.8",
+        "pug": "^2.0.0-beta6"
+    },
+    "devDependencies": {
+        "nodemon": "^1.11.0"
+    }
+}
