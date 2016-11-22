@@ -65,9 +65,8 @@
 - **Rich choice** of authentication strategies
 - **Extensible** - allows developers to implement custom strategies
 - **Combine strategies** - developers can use multiple strategies for the same application
-
-<!-- attr: { style: 'font-size: 0.95em' } -->
-# Why use Passportjs
+<!-- attr: { style: 'font-size: 0.95em', showInPresentation: true } -->
+<!-- # Why use Passportjs -->
 - **Unopinionated** - can be used with any data storage/client
 - **Open source** - you can always take a read through the source code
 - **Small codebase** - simple, easy to read, easy to configure
@@ -112,8 +111,9 @@ npm install passport-local --save
 
 - Perform `npm install` to install the dependencies
 
-# Configuration
-- Server middleware
+<!-- attr: { style: 'font-size: 0.95em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
+- Configure server middleware:
 
 ```js
 app.use(cookieParser());
@@ -125,16 +125,16 @@ app.use(passport.initialize());
 app.use(passport.session());
 ```
 
-<!-- attr: { style: 'font-size: 0.9em', hasScriptWrapper: true } -->
-# Configuration
+<!-- attr: { style: 'font-size: 0.9em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
 - HTML forms send url encoded data by default, hence `bodyParser.urlencoded`
     - With `bodyParser.json` credentials can be read from request body
 - `express-session` is a middleware that stores data about sessions
     - `passport.session` builds on top of `express-session`
 
-<!-- attr: { style: 'font-size: 0.95em', hasScriptWrapper: true } -->
-# Configuration
-- Configuring the local strategy
+<!-- attr: { style: 'font-size: 0.95em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
+- Configure the local strategy:
 
 ```js
 passport.use(new LocalStrategy(
@@ -153,9 +153,9 @@ function (username, password, done) {
 }));
 ```
 
-<!-- attr: { style: 'font-size: 0.9em', hasScriptWrapper: true } -->
-# Configuration
-- Serialization and deserialization
+<!-- attr: { style: 'font-size: 0.9em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
+- Set serialization and deserialization:
 
 ```js
 passport.serializeUser((user, done) => {
@@ -177,9 +177,9 @@ passport.deserializeUser((id, done) => {
 });
 ```
 
-<!-- attr: { style: 'font-size: 0.8em', hasScriptWrapper: true } -->
-# Configuration
-- Setup а route that returns a form
+<!-- attr: { style: 'font-size: 0.8em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
+- Setup а route that returns a form:
 
 ```js
 app.post('/login', 
@@ -199,9 +199,9 @@ app.get('/login', (req, res) => res.status(200).send(`
 < /form>`));
 ```
 
-<!-- attr: { style: 'font-size: 0.9em', hasScriptWrapper: true } -->
-# Configuration
-- Set up app routes
+<!-- attr: { style: 'font-size: 0.9em', showInPresentation: true, hasScriptWrapper: true } -->
+<!-- # Configuration -->
+- Setup app routes:
 
 ```js
 // use isAuthenticated method from passport to determine
@@ -222,13 +222,13 @@ app.get('/unauthorized', (req, res) => {
 ```
 
 <!-- attr: { class: 'slide-section', showInPresentation: true } -->
-# Setting Passport up
+<!-- # Setting Passport up -->
 ## [Demo](./demos/app.js)
 
 <!-- section start -->
 <!-- attr: { class: 'slide-section', hasScriptWrapper: true, showInPresentation: true } -->
-# OAuth and OAuth providers
-## Facebook, Twitter, GitHub, etc
+<!-- # OAuth and OAuth providers
+## Facebook, Twitter, GitHub, etc -->
 
 # OAuth
 - **OAuth** is an authentication protocol
@@ -244,14 +244,19 @@ app.get('/unauthorized', (req, res) => {
 1. The client will be redirected back to the server
 1. The token from the provider will be used for authentication
 
+<!-- attr: { hasScriptWrapper: true } -->
+# OAuth flow
+<img class="slide-image" src="./imgs/oauth.jpg" style="top:15%; left:10%; width:80%">
+
+
 # OAuth with Passportjs
 - Passport supports **OAuth 1.0** and **OAuth 2.0**
 - Passport also has a rich set of **OAuth** provider strategies
     - Facebook, GitHub, LinkedIn, Google, etc
 - Browse the strategies at http://passportjs.org/
 
-<!-- attr: { class: 'slide-section' } -->
-# Using a third-party provider
+<!-- attr: { class: 'slide-section', showInPresentation: true } -->
+<!-- # Using a third-party provider -->
 ## [Demo]()
 
 <!-- section start -->
