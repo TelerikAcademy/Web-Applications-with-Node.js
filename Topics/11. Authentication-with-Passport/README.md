@@ -131,26 +131,28 @@ app.use(passport.session());
 - `express-session` is a middleware that stores data about sessions
     - `passport.session` builds on top of `express-session`
 
-<!-- attr: { style: 'font-size: 0.9em', hasScriptWrapper: true } -->
+<!-- attr: { style: 'font-size: 0.95em', hasScriptWrapper: true } -->
 # Configuration
 - Configuring the local strategy
 
 ```js
 passport.use(new LocalStrategy(
 function (username, password, done) {
-    // get user from somewhere
-    
-    // if a matching user is found
-    done(null, user);
+    data
+     .userByUsername(username)
+     .then(user => {
+         if(user && 
+            passwordMatches(user.password, password)) {
+                done(null, user);
+            }
 
-    // if no user is found
-    done(null, false);
-
-    // if an error occurred
-    done(error, false);
+        done(null, false);
+     })
+     .catch(error => done(error, false));
 }));
 ```
 
+<!-- attr: { style: 'font-size: 0.9em', hasScriptWrapper: true } -->
 # Configuration
 - Serialization and deserialization
 
@@ -162,13 +164,15 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    // get user by id somehow
+    // user the id from the serialized session
+    data.userById(id)
+        .then(user => {
+            if(user)
+                return done(null, user);
 
-    // if found
-    done(null, user);
-
-    // if not found
-    done(null, false);
+            done(null, false)
+        })
+        .catch(error => done(error, false));
 });
 ```
 
@@ -179,16 +183,12 @@ passport.deserializeUser((id, done) => {
 ```js
 app.post('/login', 
     passport.authenticate('local', { 
-        failureRedirect: '/failed'
+        failureRedirect: '/login'
     }),
     (req, res) => {
         res.status(200)
         .send('<h1>Worked!</h1>')
     });
-
-app.get('/unauthorized', (req, res) => {
-    res.send('You shall not pass!');
-});
 
 app.get('/login', (req, res) => res.status(200).send(`
 < form method="POST" action="/login">
@@ -214,8 +214,14 @@ app.get('/profile', (req, res) => {
        .send(`Welcome, ${req.user.username}!`);
 });
 
-app.get('/failed', (req, res) => {
+app.get('/unauthorized', (req, res) => {
     res.status(200)
        .send('<h1>Wa wa!</h1>');
 });
 ```
+
+<!-- attr: { class: 'slide-section', showInPresentation: true } -->
+# Setting Passport up
+## [Demo](./demos/app.js)
+
+<!-- section start -->
