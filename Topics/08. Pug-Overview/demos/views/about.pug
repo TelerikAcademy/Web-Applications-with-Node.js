@@ -1,0 +1,12 @@
+mixin list-item(name, link)
+    li.list-item
+        a(href= link)= name
+
+mixin list(items)
+    each item in items
+        +list-item(item.name, "/1123123")
+
++list(superheroes)
+
+
+
