@@ -1,7 +1,7 @@
 <!-- section start -->
 <!-- attr: { id:'title', class:'slide-title', hasScriptWrapper:true } -->
 # RESTful APIs with Express
-## TODO
+## REST Architecture with Express
 
 <div class="signature">
     <p class="signature-course">Web applications with Node.js</p>
@@ -70,10 +70,39 @@ POST    /remove_review?product_id=1052&review_id=10
 GET     /reviews?product_id=1052&review=10
 ```
 
-<!-- attr: { style: 'font-size: 0.8em' } -->
+<!-- attr: { style: 'font-size: 0.9em' } -->
 # RESTful APIs
-- Which style is more consistent?
-- If both APIs are changed
+- Which style is more consistent and standartized?
+- If both APIs are updated, which API documentation will you have to read more of?
+- Assume the first request work - for which API can you tell whether the other 3 will?
+
+# Some RESTful tips
+- HTTP methods:
+    - `GET` method for read-only requests
+    - `POST` method for creation requests
+    - `PUT` or `PATCH` for update requests
+    - `DELETE` for remove requests
+
+<!-- attr: { style: 'font-size: 0.9em' } -->
+# Some RESTful tips
+- When operating on a collection - `users` for example
+```http
+GET /users  - all users, may be filtered by query params
+POST /users - create a new user
+```
+
+- Operating on a record
+```http
+GET /users/ID    - return the user with the matching ID
+DELETE /users/ID - remove the user with the matching ID
+PATCH /users/ID  - update the user with the given ID
+PUT /users/ID    - replace the user with the given ID
+```
+
+<!-- section start -->
+<!-- attr: { class: 'section-start', showInPresentation: true } -->
+<!-- RESTful API using Express
+## [Demo](./demos) -->
 
 <!-- section start -->
 <!-- attr: { class: 'slide-section', showInPresentation: true } -->
