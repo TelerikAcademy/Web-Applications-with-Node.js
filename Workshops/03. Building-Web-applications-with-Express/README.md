@@ -95,6 +95,8 @@ Create an application about superheroes :)
     - Showing only name, secret identity, their image and alignment
   - List superheroes by city, country or planet
     - Showing only name, secret identity, their image and alignment
+  - Search for superheroes, with paging
+    - The results must match the name, secret identity or story of the superhero
   - Get details for a superhero by superheroId:
     - Showing the full information about the superhero
   - List fractions, with paging
@@ -103,6 +105,8 @@ Create an application about superheroes :)
     - Showing only name and alignment
   - List fractions with a planet, with paging
     - Showing only name and alignment
+  - Search for fractions, with paging
+    - The results must match the name
   - Get details for a fraction by fractionId:
     - Showing the full information about the fraction
 
