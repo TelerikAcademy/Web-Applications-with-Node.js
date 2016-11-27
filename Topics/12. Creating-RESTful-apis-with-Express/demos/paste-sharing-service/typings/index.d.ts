@@ -1,1 +1,1 @@
-/// <reference path="globals/mongoose/index.d.ts" />
+/// <reference path="globals/crypto-js/index.d.ts" />

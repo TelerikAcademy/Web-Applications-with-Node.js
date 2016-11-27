@@ -1,15 +1,22 @@
 'use strict';
 
 const router = require('express').Router(),
-    models = require('../models'),
-    data = require('../data')(models),
-    pastesController = require('../controllers/pastes-controller')(data);
+    createPastesController = require('../controller/pastes-controller'),
+    data = require('../data'),
+    auth = require('../middlewares/auth-middleware'),
+    dataMiddleware = require('../middlewares/data-middlewares');
 
-router
-    .get('/api/pastes', pastesController.all)
-    .post('/api/pastes', pastesController.create)
-    .put('/api/pastes/:id', pastesController.update)
-    .delete('/api/pastes/:id', pastesController.delete)
-    .post('/api/pastes/:id/comments', pastesController.createComment);
+const pastesController = createPastesController(data);
 
-module.exports = app => app.use(router);
+module.exports = app => {
+    router
+        .get('/api/pastes', pastesController.getPastes)
+        .post('/api/pastes', pastesController.createPaste)
+        .get('/api/pastes/:pasteId', dataMiddleware.pasteById, pastesController.pasteById)
+        .put('/api/pastes/:pasteId', auth.isInRole('admin'), pastesController.updatePaste)
+        .delete('/api/pastes/:pasteId', auth.isInRole('admin'), pastesController.removePaste)
+        .post('/api/pastes/:pasteId/comments', auth.isAuthenticated, dataMiddleware.pasteById, pastesController.createComment)
+
+
+    app.use(router);
+}

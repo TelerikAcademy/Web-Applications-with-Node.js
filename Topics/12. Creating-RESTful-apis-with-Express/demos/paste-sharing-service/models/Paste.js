@@ -2,35 +2,37 @@
 
 const mongoose = require('mongoose');
 
-const Paste = new mongoose.Schema({
+const pasteSchema = new mongoose.Schema({
     content: {
         type: String,
         minlength: 10,
-        maxlength: 1000
+        maxlength: 2000,
+        required: true
     },
-    lang: String,
+    lang: {
+        type: String,
+        minlength: 1
+    },
     author: {
-        username: String,
-        _id: String
+        username: String
     },
     deletedAt: {
-        type: Date,
-        default: null
+        type: Date
     },
-    comments: [{
-        content: {
-            type: String,
-            required: true,
-            minlength: 10,
-            maxlength: 2000
-        },
-        author: {
-            username: String,
-            _id: String
+    comments: [
+        {
+            content: {
+                type: String,
+                required: true,
+                minlength: 10
+            },
+            author: {
+                username: String
+            }
         }
-    }]
+    ]
 });
 
-mongoose.model('Paste', Paste);
+mongoose.model('Paste', pasteSchema);
 
 module.exports = mongoose.model('Paste');

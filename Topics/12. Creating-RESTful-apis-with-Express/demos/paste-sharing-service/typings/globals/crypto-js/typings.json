@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/15934f58efab88b92ae84817372d8eb824e11264/crypto-js/crypto-js.d.ts",
+    "raw": "registry:dt/crypto-js#3.1.4+20160708041433",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/15934f58efab88b92ae84817372d8eb824e11264/crypto-js/crypto-js.d.ts"
+  }
+}

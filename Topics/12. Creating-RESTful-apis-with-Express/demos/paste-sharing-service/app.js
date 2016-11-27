@@ -2,9 +2,6 @@
 
 const PORT = 3001;
 
-const app = require('./config/app-config');
+const app = require('./config/app');
 
-// attach routing
-require('./routing')(app);
-
-app.listen(PORT, () => console.log(`Magic happening on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Magic happening at http://localhost:${PORT}`));
