@@ -38,22 +38,22 @@ There will be at least 3 practical workshops and 4 live demos though the course,
 <!--
 ##  Ден 1
 
-1.  Въведение в Pug
-1.  Първи стъпки в Express
-1.  MVC архитектура на уеб приложение с Express (routers, views, controllers)
+11:00 - Въведение в Pug
+12:30 - Обедна почивка
+13:30 - Първи стъпки в Express
+16:00 - MVC архитектура на уеб приложение с Express (routers, views, controllers)
 
 ##  Ден 2
 
-1.  Автентикация с Passport
-1.  Изграждане на RESTful API с Node.js и Express
-1.  Web Sockets с Socket.IO
+11:00 - Автентикация с Passport
+12:30 - Обедна почивка
+13:30 - Изграждане на RESTful API с Node.js и Express
+16:00 -  Web Sockets с Socket.IO
 
 ##  Ден 3
-1.  Компонентно тестване с Mocha, Chai и Sinon
-1.  Интеграция на уеб приложения на Node.js в облака
-1.  Инструменти за работа с Node.js: Gulp, Grunt, Yeoman
-
-##  Day 4
-
-1.  Демонстрация на живо: Изграждане на SPA приложение с Node.js и jQuery
+11:00 - Компонентно тестване с Mocha, Chai и Sinon
+12:30 - Обедка почивка
+13:30 - Интеграция на уеб приложения на Node.js в облака
+14:30 - Инструменти за работа с Node.js: Gulp, Grunt, Yeoman
+16:00 - Демонстрация на живо: Изграждане на SPA приложение с Node.js и jQuery
 -->
