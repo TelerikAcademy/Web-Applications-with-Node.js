@@ -36,14 +36,17 @@ In the "Web applications with Node.js" course we will cover the ways of using No
 1.  [MongoDB](https://www.mongodb.com/): Using native Queries
 1.  [MongoDB](https://www.mongodb.com/): MongoDB in the cloud
 1.  Brief overview of MongoDB with Mongoose
+1.  Testing the DB Layer
 1.  _Live Demo:_ Using MongoDB
 1.  _Workshop:_ Working with [MongoDB](https://www.mongodb.com/)
 
-#   Node.js: HTTP and layers
+#   Node.js: HTTP and Architecture
 
 1.  HTTP in Node.js
 1.  Building Service Layer with [Mongoose](http://mongoosejs.com/)
 1.  Impementing dependency injection
+1.  Architecture (split the app into small apps)
+1.  Making testable app
 1.  _Workshop:_ HTTP & Async
 
 #   Node.js: Express
@@ -60,7 +63,7 @@ In the "Web applications with Node.js" course we will cover the ways of using No
 #   Node.js cloud
 1.  Containers Oveview
 1.  Clouds Overview
-1.  Running Node.js application in the cloud
+1.  Running Node.js application in the cloud (AWS)
 1.  _Live Demo:_ Building a [SPA Application](https://en.wikipedia.org/wiki/Single-page_application)
 1.  _Workshop:_ Creating course projects and consultations
 
