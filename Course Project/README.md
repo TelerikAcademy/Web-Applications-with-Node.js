@@ -1,7 +1,7 @@
 # Course Project
 _Web applications with Node.js_
 
-This document describes the **course project assignment** for the [Web applications with Node.js course](telerikacademy.com/courses/courses/Details/400) at Telerik Academy.
+This document describes the **course project assignment** for the [Web applications with Node.js course](telerikacademy.com/courses/courses/Details/438) at Telerik Academy.
 
 ## Project Description
 
@@ -28,7 +28,7 @@ This area could hold for example the user's profiles management functionality, t
 
 Your Web application should use the following technologies, frameworks and development techniques:
 
-### Application Back-end (Server)
+### Application Back-end (Server) - up to 40%
 
 - At least **5 different public dynamic web pages**
   - Using [Pug](https://pugjs.org/)
@@ -40,23 +40,51 @@ Your Web application should use the following technologies, frameworks and devel
   - Use an **MV-*** pattern
 - Use **MongoDB**
   - As data storage
-  - Optionally, you may use **Mongoose** or any other ODM framework
+  - Do not use Mongoose
 - Create a data/service layer for accessing the database
 - Use [Passport](http://passportjs.org/) - for managing **users**
-  - Your registered users should have at least one of the two roles: **user**
+- Implement WebSockets
+  - Using Socket.io or anything else
 
-### Application front-end (client)
+### Application front-end (client) - up to 25%
 
 - Use any framework of your choice for the front-end
   - Optional, not required
   - KendoUI, AngularJS, Angular 2, Knockout, Bootstrap, etc...
-- implement responsive design
+- Implement responsive design
   - It may be based on **Bootstrap**, **Materialize** or any other UI framework
 - Use at least **one AJAX form and/or WebSockets communication**
-- Write at least **10 different unit tests** for your controllers and data logic
 - Apply **error handling** and **data validation** to avoid crashes when invalid data is entered
+- Use loaders, modals and notifications when applicable
 - Prevent yourself from **security** holes (XSS, XSRF, Parameter Tampering, etc.)
   - Handle correctly the **special HTML characters** and tags like `<script>`, `<br />`, etc.
+- Create usable UI
+  - No need to be pretty, but **usable**
+
+### Testing - up to 25%
+
+- Unit test your application backend
+  - 50%+ code coverage is required
+    - Less will not win the points
+- Write functional tests with selenium
+  - Any webdriver is Ok
+    - Gecko, Chrome, PhantomJS, SlimerJS, etc...
+  - Test 50% of the application routes
+    - Less will not win the points
+- Write integration tests for AJAX routes
+  - With supertest
+
+### Deployment in Amazon Web Services (AWS) - up to 10%
+
+- Deploy your application in AWS
+- Use MongoDB from AWS
+
+### Bonus requirements - up to 10%
+
+- Setup a continious integration environment
+  - Jenkids, CircleCI, or anything else
+- Unit testing the client code
+- Usage of containers
 
 ##  General Requirements
 
@@ -68,7 +96,6 @@ Your Web application should use the following technologies, frameworks and devel
 ### Optional Requirements
 
 - Nice looking UI supporting of all modern and old Web browsers
-- Good usability (easy to use UI)
 - Record a short video showcasing your application
   - ~1-2 minutes, just show the interesting features
   - Do not record register/login functionality, this is not interesting...
@@ -76,7 +103,7 @@ Your Web application should use the following technologies, frameworks and devel
 ### Deliverables
 
 - Upload your application in the cloud
-  - MS Azure, HerokuCloud, Amazon, all are fine
+  - Amazon Web Services
 - Register your application at [Our Showcase System](http://best.telerikacademy.com)
   - Link to the live application
   - Link to the video
@@ -90,6 +117,7 @@ The public defense includes:
 
 - Live **demonstration** of the developed web application (prepare sample data).
 - Explain application structure and its back-end and front-end **source code**
+- Run the tests
 - Show the **commit logs** in the source control repository to prove a contribution from all team members.
 - May include a simple task for each team member
   - The task must be implemented immediately

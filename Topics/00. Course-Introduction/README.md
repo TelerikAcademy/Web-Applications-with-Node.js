@@ -12,7 +12,6 @@
 <!-- section start -->
 <!-- attr: { id:'table-of-contents' } -->
 # Table of Contents
-- What's Coming Next in the Academy?
 - The Web Applications with Node.js
 - Course project and Evaluation
 - Prerequisites for the Course
@@ -25,11 +24,10 @@
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # Web Applications with Node.js
-- [**The Web Applications with Node.js**](http://telerikacademy.com/Courses/Courses/Details/400) Course
-  - Continuation of [JavaScript applications](http://telerikacademy.com/Courses/Courses/Details/350)
+- [**The Web Applications with Node.js**](http://telerikacademy.com/Courses/Courses/Details/438) Course
+  - Continuation of [JavaScript applications](http://telerikacademy.com/Courses/Courses/Details/427)
   - Creating web applications using JavaScript and Node.js
-- Lectures 5 times a week
-  - From Monday to Friday
+- Lectures 2 times a week
   - Average `6` hours lectures and workshops per day
   - `~50` hours of presentations
   - `~40` hours of workshops
@@ -49,12 +47,17 @@
   - File IO, Streams
   - Debuggers, tools
 - Working with databases
-  - MongoDB & Mongoose
+  - MongoDB
   - Building service layer
 - Creating web applications
   - Express, Pug, MVC, Web Sockets
-- Unit testing
-  - Mocha, Chai, Karma
+- Testing
+  - Unit testing
+  - Integration testing
+  - Functional testing
+- Containers and Cloud
+  - Containers overview
+  - Deployment to AWS
 
 <!-- section start -->
 <!-- attr: {id: 'evaluation', class: 'slide-section'} -->
@@ -63,11 +66,10 @@
 
 # Course Evaluation
 - Course Evaluation
-  - **Course Project** – up to `65%`
+  - **Course Project** – up to `75%`
     - Each team member may get a part of the whole project, based on their participation
-  - **Homework** – up to `15%`
-  - **Homework evaluation** – up to `5%`
   - **Workshop participation** - up to `15%`
+  - **Attendance** - up to `10%`
 
   <!-- attr: { style:'font-size:0.75em' } -->
 # The Course Project
@@ -77,26 +79,18 @@
     - i.e. no SPA application
   - Must have AJAX calls
   - Must be hosted in a cloud
-    - MS Azure, Amazon AWS, HerokuCloud or others
+    - Amazon AWS
+  - Zero ESLint errors
+  - Must have tests
+    - Both unit and functional
   - Full course project description [here](https://github.com/TelerikAcademy/Web-Applications-with-Node.js/tree/master/Course%20Project)
-- Teams of 5
+- Teams of 3
   - You choose your teammates
-    - On site participants: until 10:00, 16 Nov 2016
-    - Live participants: until 10:00, 18 Nov 2016
+    - Until 10:00, 23 June 2017
     - Fill the form [here](https://goo.gl/forms/hOQg9O1laMDIFTo13)
   - The evaluation will consist of:
     - Course project evaluation
     - Each team member will be evaluated individually
-
-# Homework Peer Reviews
--  Everyone will **get feedback** for their homework
--  Everyone will **give feedback** for few random homework submissions
-    -  Students submit homework **anonymously**
-    -  Please exclude your name from the submissions!
-  -  For each homework submitted
-    -  Students **evaluate 3 random homeworks**
-    -  From the same topic, after the deadline
-    -  Homework comments are `not obligatory`
 
 # Pass / Excellence / Fail Criteria
 -  Criteria for pass / pass with excellence / fail
@@ -124,7 +118,7 @@
   -  Homework submissions / peer reviews
   -  Presence cards with barcode
   -  Reports about your results
--  [Course site](http://telerikacademy.com/Courses/Courses/Details/400)
+-  [Course site](http://telerikacademy.com/Courses/Courses/Details/438)
 
 # Node.js Useful Links
 -  [http://nodejs.org/](http://nodejs.org/) - NodeJS official web site
@@ -137,7 +131,7 @@
 - Software
   - Any OS is fine: Linux, Mac, Windows
   - **Node.js**
-    - v.6.9.1+
+    - v.8.X.X
   - **MongoDB** Server
   - Any text editor will do:
     - Preferably use **Visual Studio Code**, **Atom.io** or **WebStorm**
