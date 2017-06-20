@@ -40,21 +40,18 @@
 # Topics in "Web Applications with Node.js"
 ## What Will We Cover in the Course?
 
-<!-- attr: { hasScriptWrapper:true, style: "font-size: 0.9em" } -->
+<!-- attr: { hasScriptWrapper:true, style: "font-size: 0.8em" } -->
 # Topics in "Web Applications with Node.js"
 
 - Basics of Node.js
   - File IO, Streams
-  - Debuggers, tools
+  - Debuggers, tools, task runners (gulp)
 - Working with databases
-  - MongoDB
-  - Building service layer
+  - MongoDB, building service layer
 - Creating web applications
   - Express, Pug, MVC, Web Sockets
 - Testing
-  - Unit testing
-  - Integration testing
-  - Functional testing
+  - Unit testing, functional testing
 - Containers and Cloud
   - Containers overview
   - Deployment to AWS
@@ -71,7 +68,6 @@
   - **Workshop participation** - up to `15%`
   - **Attendance** - up to `10%`
 
-  <!-- attr: { style:'font-size:0.75em' } -->
 # The Course Project
 
 - Build a web application with Express and MongoDB
@@ -84,10 +80,12 @@
   - Must have tests
     - Both unit and functional
   - Full course project description [here](https://github.com/TelerikAcademy/Web-Applications-with-Node.js/tree/master/Course%20Project)
+
+# The Teams
 - Teams of 3
   - You choose your teammates
     - Until 10:00, 23 June 2017
-    - Fill the form [here](https://goo.gl/forms/hOQg9O1laMDIFTo13)
+    - Fill the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdg2nuSTccQZX5dHk_dmofDB51UPcLQo3mPZp8Bkp874P4vwQ/viewform?c=0&w=1)
   - The evaluation will consist of:
     - Course project evaluation
     - Each team member will be evaluated individually
