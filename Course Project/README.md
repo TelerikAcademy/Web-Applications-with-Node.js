@@ -82,7 +82,7 @@ Your Web application should use the following technologies, frameworks and devel
 ### Bonus requirements - up to 10%
 
 - Setup a continious integration environment
-  - Jenkids, CircleCI, or anything else
+  - Jenkins, CircleCI, or anything else
 - Unit testing the client code
 - Usage of containers
 
