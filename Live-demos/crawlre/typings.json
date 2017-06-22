@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20170223183302",
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111"
+  }
+}
