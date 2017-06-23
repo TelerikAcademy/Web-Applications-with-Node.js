@@ -1,52 +1,55 @@
 // eslint.ignore no-invalid-this
 // enqueue, dequeue, peek(), isEmpty()
 
-const queue = {
-    init() {
+class Queue {
+    constructor() {
         this.head = null;
         this.tail = null;
-        return this;
-    },
-    pushMany(...values) {
-        values.forEach((v) => this.push(v));
-        return this;
-    },
-    push(value) {
-        const item = {
-            value,
-            next: null,
-        };
+        this.length = 0;
+    }
 
-        if (this.tail === null) {
-            this.head = this.tail = item;
-            return this;
-        }
+    push(...values) {
+        values.forEach((value) => {
+            const item = {
+                value,
+                next: null,
+            };
 
-        this.tail.next = item;
-        this.tail = item;
+            if (this.tail === null) {
+                this.head = this.tail = item;
+            } else {
+                this.tail.next = item;
+                this.tail = item;
+            }
+            this.length += 1;
+        });
+
         return this;
-    },
+    }
+
     pop() {
         if (this.head === null) {
             return this;
         }
         const value = this.head.value;
         this.head = this.head.next;
+        this.length -= 1;
         return value;
-    },
+    }
+
     peek() {
         return this.head
             ? this.head.value
             : null;
-    },
+    }
+
     isEmpty() {
         return !this.head;
-    },
+    }
+}
+
+const getQueue = () => {
+    return new Queue();
 };
 
-module.exports = {
-    getQueue() {
-        return Object.create(queue)
-            .init();
-    },
-};
+module.exports = { Queue, getQueue };
