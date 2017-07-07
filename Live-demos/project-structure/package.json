@@ -1,0 +1,28 @@
+{
+  "name": "project-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.3",
+    "mongodb": "^2.2.29",
+    "pug": "^2.0.0-rc.2",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.2",
+    "gulp-mocha": "3",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "selenium-webdriver": "^3.4.0",
+    "sinon": "^2.3.6"
+  }
+}
