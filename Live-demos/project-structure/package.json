@@ -11,9 +11,11 @@
     "express": "^4.15.3",
     "express-messages": "^1.0.1",
     "express-session": "^1.15.3",
+    "jquery": "^3.2.1",
     "mongodb": "^2.2.29",
     "pug": "^2.0.0-rc.2",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "typeahead": "^0.2.2"
   },
   "devDependencies": {
     "chai": "^4.0.2",

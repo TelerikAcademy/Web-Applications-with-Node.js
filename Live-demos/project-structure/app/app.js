@@ -16,6 +16,7 @@ const init = (data) => {
     app.use(bodyParser.urlencoded({ extended: true }));
 
     app.use('/libs', express.static(path.join(__dirname, '../node_modules/')));
+    app.use('/static', express.static(path.join(__dirname, '../static/')));
 
     app.use(cookieParser('keyboard cat'));
     app.use(session({ cookie: { maxAge: 60000 } }));

@@ -1,4 +1,4 @@
-class BaseData {
+class BaseMongoDbData {
     constructor(db, ModelClass, validator) {
         this.db = db;
         this.ModelClass = ModelClass;
@@ -7,36 +7,53 @@ class BaseData {
         this.collection = this.db.collection(this.collectionName);
     }
 
-    getAll() {
-        const filter = {};
-        const options = {};
-        let result = this.collection
-            .find(filter, options)
+    filterBy(props) {
+        return this.collection.find(props)
             .toArray();
+    }
 
-        if (this.ModelClass.toViewModel) {
-            result = result.then((models) => {
-                return models
-                    .map((model) =>
-                        this.ModelClass.toViewModel(model));
-            });
-        }
-
-        return result;
+    getAll() {
+        return this.collection.find()
+            .toArray();
     }
 
     create(model) {
         if (!this._isModelValid(model)) {
-            return Promise.reject('Invalid model');
+            return Promise.reject('Validation failed!');
         }
-
         return this.collection.insert(model)
             .then(() => {
-                return this.ModelClass.toViewModel(model);
+                return model;
             });
     }
 
+    findOrCreateBy(props) {
+        return this.filterBy(props)
+            .then(([model]) => {
+                if (!model) {
+                    model = {};
+                    return this.collection.insert(model)
+                        .then(() => {
+                            return model;
+                        });
+                }
+
+                return model;
+            });
+    }
+
+    updateById(model) {
+        return this.collection.updateOne({
+            _id: model._id,
+        }, model);
+    }
+
     _isModelValid(model) {
+        if ('undefined' === typeof this.validator ||
+            'function' !== typeof this.validator.isValid) {
+            return true;
+        }
+
         return this.validator.isValid(model);
     }
 
@@ -45,4 +62,5 @@ class BaseData {
     }
 }
 
-module.exports = BaseData;
+module.exports = BaseMongoDbData;
+

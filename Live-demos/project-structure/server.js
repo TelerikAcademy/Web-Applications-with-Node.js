@@ -1,4 +1,4 @@
-// - MongoDb
+/* eslint-disable no-console */
 
 const async = () => {
     return Promise.resolve();
@@ -11,5 +11,6 @@ async()
     .then((db) => require('./data').init(db))
     .then((data) => require('./app').init(data))
     .then((app) => {
-        app.listen(config.port, () => console.log(`Magic happends at :${config.port}`));
+        app.listen(config.port, () =>
+            console.log(`Magic happends at :${config.port}`));
     });

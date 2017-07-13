@@ -6,11 +6,14 @@ class UsersData extends BaseData {
         super(db, User);
     }
 
+    findByUsername(username) {
+        return this.filterBy({
+            username: new RegExp(username, 'i'),
+        });
+    }
+
     checkPassword(username, password) {
-        return this.collection
-            .findOne({
-                username,
-            })
+        return this.findByUsername(username)
             .then((user) => {
                 if (!user) {
                     throw new Error('Invalid user');

@@ -1,0 +1,9 @@
+extends ../_shared/_master
+block body
+    ul
+        each todo in context
+            li
+                a(href="/todos/" + todo._id)
+                    =todo.text
+                input(type="checkbox" checked=todo.isDone)
+                ="(" + todo.category.name + ")"
