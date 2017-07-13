@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions */
 const { expect } = require('chai');
 const { setupDriver } = require('../utils/setup-driver');
-const webdriver = require('selenium-webdriver');
 const ui = require('../utils/ui');
 const itemsUtils = require('../utils/items.utils');
 
