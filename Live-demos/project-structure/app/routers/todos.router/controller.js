@@ -4,12 +4,9 @@ class TodosController {
     }
 
     getAll(req, res) {
-        return this.data.todos.getAll()
-            .then((todos) => {
-                return res.render('todos/all', {
-                    context: todos,
-                });
-            });
+        return res.render('todos/all', {
+            context: req.user.todos || [],
+        });
     }
 
     getForm(req, res) {
@@ -26,6 +23,14 @@ class TodosController {
         const category = {
             name: todo.category,
         };
+
+        const user = req.user;
+
+        todo.user = {
+            id: user._id,
+            username: user.username,
+        };
+
         return Promise
             .all([
                 this.data.todos.create(todo),
@@ -33,11 +38,10 @@ class TodosController {
             ])
             .then(([dbTodo, dbCategory]) => {
                 dbCategory.name = todo.category;
-
                 dbCategory.todos = dbCategory.todos || [];
                 dbCategory.todos.push({
                     _id: dbTodo._id,
-                    name: dbTodo.name,
+                    text: dbTodo.text,
                     isDone: dbTodo.isDone,
                 });
 
@@ -45,16 +49,26 @@ class TodosController {
                     _id: dbCategory._id,
                     name: dbCategory.name,
                 };
+
+                user.todos = user.todos || [];
+                user.todos.push({
+                    _id: dbTodo._id,
+                    text: dbTodo.text,
+                    isDone: dbTodo.isDone,
+                    category: dbTodo.category,
+                });
+
                 return Promise.all([
                     this.data.todos.updateById(dbTodo),
                     this.data.categories.updateById(dbCategory),
+                    this.data.users.updateById(user),
                 ]);
             })
             .then(() => {
+                // connect-flash
                 return res.redirect('/todos');
             })
             .catch((err) => {
-                // connect-flash
                 req.flash('error', err);
                 return res.redirect('/todos/form');
             });

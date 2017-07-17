@@ -6,12 +6,37 @@ const attachTo = (app, data) => {
 
     router
         .get('/', (req, res) => {
+            if (!req.user) {
+                return Promise.resolve()
+                    .then(() => {
+                        req.flash(
+                            'err',
+                            { message: 'You need authentication' }
+                        );
+
+                        res.redirect('/auth/sign-in');
+                    });
+            }
             return controller.getAll(req, res);
         })
         .get('/form', (req, res) => {
+            if (!req.user) {
+                return Promise.resolve()
+                    .then(() => {
+                        res.redirect('/auth/sign-in');
+                    });
+            }
+
             return controller.getForm(req, res);
         })
         .post('/', (req, res) => {
+            if (!req.user) {
+                return Promise.resolve()
+                    .then(() => {
+                        res.redirect('/auth/sign-in');
+                    });
+            }
+
             return controller.create(req, res);
         });
 

@@ -1,12 +1,49 @@
 mixin nav()
-    ul
-        li
-            a(href="/")
-                | Home
-        li
-            a#nav-btn-item-all(href="/items")
-                | All items
-        li
-            a#nav-btn-item-add(href="/items/form")
-                | Add item
-        
+    script(src="/static/js/nav.js")
+    nav.nav
+        ul.list.list-horizontal
+            li.list-item
+                a.nav-btn(href="/")
+                    | Home
+            li.list-item.dropdown
+                a.nav-btn.dropdown-toggle#nav-btn-toggle-items(href="#")
+                    | Items
+                ul.dropdown-list.list
+                    li.list-item
+                        a.nav-btn#nav-btn-item-all(href="/items")
+                            | All items
+                    li.list-item
+                        a.nav-btn#nav-btn-item-add(href="/items/form")
+                            | Add item        
+            
+            li.list-item.dropdown
+                a.nav-btn.dropdown-toggle#nav-btn-toggle-items(href="#")
+                    | Todos
+                ul.dropdown-list.list
+                    li.list-item
+                        a.nav-btn#nav-btn-item-all(href="/todos")
+                            | All Todos
+                    li.list-item
+                        a.nav-btn#nav-btn-item-add(href="/todos/form")
+                            | Add Todo
+
+            if user
+                li.list-item.dropdown
+                    a.nav-btn.dropdown-toggle#nav-btn-toggle-items(href="#")
+                        =user.username
+                    ul.dropdown-list.list
+                        li.list-item
+                            form(action="/auth/sign-out" method="post")
+                                button.nav-btn
+                                    | sign-out
+            else
+                li.list-item.dropdown
+                    a.nav-btn.dropdown-toggle#nav-btn-toggle-items(href="#")
+                        | User
+                    ul.dropdown-list.list
+                        li.list-item
+                            a.nav-btn#nav-btn-item-all(href="/auth/sign-up")
+                                | Sign Up
+                        li.list-item
+                            a.nav-btn#nav-btn-item-add(href="/auth/sign-in")
+                                | Sign In

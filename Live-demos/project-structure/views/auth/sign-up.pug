@@ -1,0 +1,7 @@
+extends ../_shared/_master
+block body
+    form(action='/auth/sign-up', method="POST")
+        input.form-control(type="text" name="username" placeholder="Enter username")
+        input.form-control(type="password" name="password" placeholder="Enter password")
+        button.btn.btn-success
+            | Sign Up

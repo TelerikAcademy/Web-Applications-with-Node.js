@@ -4,6 +4,11 @@ const gulp = require('gulp');
 const istanbul = require('gulp-istanbul');
 const mocha = require('gulp-mocha');
 
+
+gulp.task('server:start', () => {
+    return require('./server');
+});
+
 gulp.task('pre-test', () => {
     return gulp.src([
         './data/**/*.js',
@@ -35,7 +40,7 @@ const config = {
     port: 3002,
 };
 
-gulp.task('server-start', () => {
+gulp.task('test-server:start', () => {
     return Promise.resolve()
         .then(() => require('./db').init(config.connectionString))
         .then((db) => require('./data').init(db))
@@ -49,20 +54,20 @@ gulp.task('server-start', () => {
 
 const { MongoClient } = require('mongodb');
 
-gulp.task('server-stop', () => {
+gulp.task('test-server:stop', () => {
     return MongoClient.connect(config.connectionString)
         .then((db) => {
             return db.dropDatabase();
         });
 });
 
-gulp.task('tests:browser', ['server-start'], () => {
+gulp.task('tests:browser', ['test-server:start'], () => {
     return gulp.src('./test/browser/items/create-item.js')
         .pipe(mocha({
             reporter: 'nyan',
             timeout: 10000,
         }))
         .once('end', () => {
-            gulp.start('server-stop');
+            gulp.start('test-server:stop');
         });
 });

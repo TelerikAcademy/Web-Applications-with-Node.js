@@ -41,6 +41,7 @@ describe('Items routes', () => {
 
         it('expect to be visible in /items', () => {
             return async()
+                .then(() => ui.click('#nav-btn-toggle-items'))
                 .then(() => ui.click('#nav-btn-item-all'))
                 .then(() => ui.getTexts('.container ul li'))
                 .then((texts) => {

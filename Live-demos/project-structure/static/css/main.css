@@ -1,0 +1,59 @@
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list.list-horizontal > .list-item {
+    display: inline-block;
+
+}
+
+.list > .list-item {
+    margin: 0;
+    padding: 0;    
+}
+
+.dropdown {
+    position: relative;        
+}
+
+.dropdown .dropdown-list {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: none;
+}
+
+.nav {
+    background: black;
+}
+
+.nav form {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn {
+    color: white;
+    background: none;
+    border: 0;
+    margin: 0;
+    margin: 0;
+    padding: 15px 25px;
+    display: block;
+}
+
+.nav-btn:focus{
+    background-color: rgba(255, 255, 255, .7);
+    color: white;
+} 
+.nav-btn:hover
+{
+    color: white;
+    background-color: rgba(255, 255, 255, .3);    
+}
+
+.nav .list {
+    background: black;
+}

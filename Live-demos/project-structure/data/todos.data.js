@@ -1,14 +1,10 @@
 const BaseData = require('./base/base.data');
 
-const validator = {
-    isValid() {
-        return true;
-    },
-};
+const Todo = require('../models/todo.model');
 
 class TodosData extends BaseData {
     constructor(db) {
-        super(db, { name: 'Todo' }, validator);
+        super(db, Todo, Todo);
     }
 
     filterByIsDone(isDone) {

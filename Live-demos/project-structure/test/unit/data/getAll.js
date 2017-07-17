@@ -69,7 +69,7 @@ describe('BaseData.getAll()', () => {
                 db.collection.restore();
             });
 
-            it.skip('expect to return items', () => {
+            it('expect to return items', () => {
                 return data.getAll()
                     .then((models) => {
                         items.forEach((item) => {
