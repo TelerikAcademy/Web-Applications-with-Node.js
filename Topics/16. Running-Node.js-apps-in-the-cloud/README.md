@@ -103,7 +103,7 @@
     -   Assign new IP to the MongoDB instance
 3.  Create a security group `mongodb`
     -   Open TCP port 27017
-4.  Add `node-app` security group to the MongoDB instance
+4.  Add `mongodb` security group to the MongoDB instance
     -   Right click on the instance
     -   Network -> Change security groups
 5.  Connect to the AWS instance with ssh 
