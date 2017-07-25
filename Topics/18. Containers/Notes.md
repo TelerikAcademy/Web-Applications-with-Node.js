@@ -1,0 +1,112 @@
+## Containers, Docker and AWS
+
+- Hosting applications
+    - Past - Physical
+        - Overpowered
+        - Overpriced
+    - Present - Virtual
+        - OS Overhead
+        - Licence hell
+    - Future - Containers
+
+- Physical servers
+    - How they work
+
+- Virtual servers
+    - Pros
+        - High utalization of server resources
+        - Application isolation
+    - Cons
+        - Resource and budget overhead
+        - Licensing hell
+
+- Containers
+    - Pros
+        - Fast
+        - Lightweight
+    - Cons
+    - Usage
+        - CI/CD Workflows
+        - Infrastructure
+    - Tools
+        - Logs
+        - Orchestration
+        - Clustering
+        - Monitoring
+        - Management
+        
+- Docker
+    - Docker Inc.
+    - Docker Project
+        - Main Engine
+        - Tooling around it
+    - Ecosystem
+    - Usage
+        - Cloud
+            - Docker Hub
+            - Docker Tantrum
+    - Workspace as containers
+    - Installation
+        - Windows
+            - Requirements
+                - Windows 10 Pro or Ultimate
+                - CPU Virtualization support
+                    - Enable Virtualization in BIOS settings
+                    - Enable Hyper-V in Windows Features settings
+            - Docker for Windows
+                - Runs a Moby Linux VM on Hyper-V
+                - Docker settings
+        - Windows Server
+            - Requirements
+                - At least Windows Server 2016 Standard or
+                - At least Windows 10 (Pro or Ultimate) Anniversary (10.0.14396)
+                - Enable Containers in Windows Features settings
+            - PS Install-PackageProvider ContainerImage -Force
+            - PS Find-ContainerImage
+            - PS Install-ContainerImage WindowsServerCore
+                - The core is 9GB in size
+                - We do this because of licensing issues
+                - Cannot host windows container images on standard public registries
+        - Mac
+            - Hardware from at least after 2010
+            - Software at least 10.10.3v
+        - Linux
+            - Most distros 
+                - wged -qO- https://get.docker.com/ | sh
+            - Have a weird/rare distro?
+                - DuckDuckGo it..
+
+-  Working with containers
+    - docker version
+        - info about client and server
+        - they can run on seperate machines
+    - docker info
+        - shit lots of info about docker client
+    - docker run hello-world
+        - how it works
+            - we call the Client with that command
+            - the client sends API calls to the Daemon
+            - the Daemon performs the following operations
+                - finds and image locally
+                - if cannot be found locally, it downloads it from Docker Hub
+                - uses the image as a template to build a new container
+                    - prints texts to the screen and exists
+    - commands
+        - run - Creates a new container based on a given image and starts it
+            - params
+                - d - Detach container's shell
+                - it - Attack to container's STDIN
+                - p - assign port in the format machine:container
+        - start
+        - stop
+        - images - shows a list of images on the local docker host
+        - rmi - removes an image
+        - ps - shows running containers
+            - params
+                - a - shows running and exited containers
+        - rm - removes a given container (data volumes persist)
+    - lifecycle
+        - Containers start with a single process PID 1.
+        - Once the process exits, the container exits with the process's exit code. 
+    - swarms
+        - loadbalancer - native container-aware loadbalancer called "routing mesh"
