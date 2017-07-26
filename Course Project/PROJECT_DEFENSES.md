@@ -64,19 +64,18 @@ Each team has exactly 30 minutes for their defense. They will be split as follow
 | Time  | Doncho          | Steven        |
 | ------|:----------------|:--------------|
 | 10:30 |PerfectCodeStorm |Vencedores  |
-| 11:00 |Dominators       |Gmenas  |
-| 11:30 |Express 9        |Express 7  |
-| 12:00 |Express 12       |Beer Sticks  |
-| 12:30 |M'bongoKongoDb   |take it easy  |
+| 11:00 |Express 9        |Gmenas  |
+| 11:30 |Express 12       |Express 7  |
+| 12:00 |M'bongoKongoDb       |Beer Sticks  |
+| 12:30 |Express 6  |take it easy  |
 ||||
-| 14:00 |Express 6        |NinjaCode  |
-| 14:30 |Express 21       |Express 16  |
-| 15:00 |Watchmen         |Dominators  |
-| 15:30 |Fade             |Eternal Dependency  |
-| 16:00 |Bug Squashers Team  |Dank Memes  |
+| 14:00 |Express 21         |NinjaCode  |
+| 14:30 |Watchmen       |Express 16  |
+| 15:00 |Fade         |Dominators  |
+| 15:30 |Bug Squashers Team            |Eternal Dependency  |
+| 16:00 |YAGNI   |Dank Memes  |
 ||||
-| 17:00 |YAGNI            |Express 15  |
-| 17:30 |Express 1        |Express 23  |
-| 18:00 |Express 17       |Squirrel  |
-| 18:30 |TwoBoobsAhead    |mongoose  |
-| 19:00 |Express 14       |  |
+| 17:00 |Express 1            |Express 15  |
+| 17:30 |Express 17         |Express 23  |
+| 18:00 |TwoBoobsAhead     |Squirrel  |
+| 18:30 |Express 14    |mongoose  |
