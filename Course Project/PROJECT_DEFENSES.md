@@ -22,15 +22,11 @@
 
 ##  Defense Procedure
 
-Each team has exactly 40 minutes for their defense. They will be split as follows:
+Each team has exactly 30 minutes for their defense. They will be split as follows:
 
-1.  The whole team presents the application Present the application - **total 5 minutes**
-  - What is the application for?
-  - The video in YouTube
-  - The uploaded project in [Telerik Academy Showcase System](http://best.telerikacademy.com)
-2.  Each team member presents part of the application that they had worked on - **total of 25 minutes**
-  - Each team members has **5 minutes** to present "their" part of the project
-3.  The trainer asks questions - **up to 10 minutes**
+1.  Each team member presents part of the application that they had worked on
+  - Each team members has **10 minutes** to present "their" part of the project
+2.  The trainer asks questions
 
 - Keep in mind, that if the trainer has **suspicions about the participation of a team member**, he can give him/her a specific a specific task to be done immediately
   - Add a one more property on a database document
@@ -41,53 +37,46 @@ Each team has exactly 40 minutes for their defense. They will be split as follow
 
 - The projects defense schedule is as follows:
 
-### December 5th, 2016
+## Day one - August 01
 
+| Time  | Doncho             | Steven            |
+| ------|:-------------------|:------------------|
+| 10:30 |Express 5           |The Wise           |
+| 11:00 |LearningAllLife     |Express 4          |
+| 11:30 |Express 20          |Express 25         |
+| 12:00 |Express 3           |e-bikers           |
+| 12:30 |Team quattro        |Express 13         |
+||||
+| 14:00 |ThreeAngryCocks     |Angry Drunk Dwarves|
+| 14:30 |ConsoleApplication1 |Express 19         |
+| 15:00 |Express 21          |Praetorians        |
+| 15:30 |Team "Short Circuit"|Pesho              |
+| 16:00 |Express 11          |The Three Musketeers|
+||||
+| 17:00 |Accessed Denied  |Express 8  |
+| 17:30 |Brotherhood of Node  |Who needs a name?  |
+| 18:00 |NoName  |Asterisk  |
+| 18:30 |Express 18  |Big Test Icicles  |
+| 19:00 |Express 24  |threeCodersInABoat  |
 
-| Team name          | Participation | Time                    | Date         |
-| ------------------ | ------------- | ----------------------- | ------------ |
-| Team G             | On site       | 10:00                   | December 5th |
-| Dedsec             | On site       | 10:40                   | December 5th |
-| Freedom            | On site       | 11:20                   | December 5th |
-| Undefined42        | On site       | 12:00                   | December 5th |
-| --- Break ---      |               | 12:40                   | December 5th |
-| Genji              | On site       | 13:10                   | December 5th |
-| Team A             | On site       | 13:50                   | December 5th |
-| Enigma             | On site       | 14:30                   | December 5th |
-| Undefined          | On site       | 15:10                   | December 5th |
-| --- Break ---      |               | 15:50                   | December 5th |
-| The Untouchables   | On site       | 16:20                   | December 5th |
-| Team H             | On site       | 17:00                   | December 5th |
-| NullReference      | On site       | 17:40                   | December 5th |
-| League of the Five | On site       | 18:20                   | December 5th |
-| --- Break ---      |               | 19:00                   | December 5th |
-| Juniors            | On site       | 19:30                   | December 5th |
-|  Team D            | On site       | 20:10                   | December 5th |
-| Team E             | On site       | 20:50                   | December 5th |
-| Russion Standart   | On site       | 21:30                   | December 5th |
+## Day two - August 02
 
-### December 6th, 2016
-
-| Team name          | Participation | Time                    | Date         |
-| ------------------ | ------------- | ----------------------- | ------------ |
-| Team B             | On site       | 10:00                   | December 6th |
-| Bird Shamaness     | On site       | 10:40                   | December 6th |
-| Djagascript        | On site       | 11:20                   | December 6th |
-| Infected Mushroom  | On site       | 12:00                   | December 6th |
-| --- Break ---      |               | 12:40                   | December 6th |
-| Infinite recursion | On site       | 13:10                   | December 6th |
-| Ninjas             | On site       | 13:50                   | December 6th |
-| Team F             | On site       | 14:30                   | December 6th |
-| FITogether         | On site       | 15:10                   | December 6th |
-| --- Break ---      |               | 15:50                   | December 6th |
-| Team C             | On site       | 16:20                   | December 6th |
-| BlackObelisk       | On site       | 17:00                   | December 6th |
-| --- Break ---      |               | 17:40                   | December 6th |
-| Team A (Online)    | Online        | Between 18:00 and 20:00 | December 6th |
-| Team B (Online)    | Online        | Between 18:00 and 20:00 | December 6th |
-| Team D (Online)    | Online        | Between 18:00 and 20:00 | December 6th |
-| Team C (Online)    | Online        | Between 18:00 and 20:00 | December 6th |
-| Tyche              | Online        | Between 18:00 and 20:00 | December 6th |
-| Robinson Crusoe    | Online        | Between 18:00 and 20:00 | December 6th |
-| undefined          | Online        | Between 18:00 and 20:00 | December 6th |
-| Team E (Online)    | Online        | Between 18:00 and 20:00 | December 6th |
+| Time  | Doncho          | Steven        |
+| ------|:----------------|:--------------|
+| 10:30 |PerfectCodeStorm |Vencedores  |
+| 11:00 |Dominators       |Gmenas  |
+| 11:30 |Express 9        |Express 7  |
+| 12:00 |Express 12       |Beer Sticks  |
+| 12:30 |M'bongoKongoDb   |take it easy  |
+||||
+| 14:00 |Express 6        |NinjaCode  |
+| 14:30 |Express 2        |Express 16  |
+| 15:00 |Watchmen         |Dominators  |
+| 15:30 |Fade             |Eternal Dependency  |
+| 16:00 |Bug Squashers Team  |Dank Memes  |
+||||
+| 17:00 |YAGNI            |Express 15  |
+| 17:30 |Express 1        |Express 23  |
+| 18:00 |Express 17       |Squirrel  |
+| 18:30 |TwoBoobsAhead    |mongoose  |
+| 19:00 |Express 14       |  |
