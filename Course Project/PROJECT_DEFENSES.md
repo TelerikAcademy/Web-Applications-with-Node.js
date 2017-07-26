@@ -49,7 +49,7 @@ Each team has exactly 30 minutes for their defense. They will be split as follow
 ||||
 | 14:00 |ThreeAngryCocks     |Angry Drunk Dwarves|
 | 14:30 |ConsoleApplication1 |Express 19         |
-| 15:00 |Express 21          |Praetorians        |
+| 15:00 |Express 2          |Praetorians        |
 | 15:30 |Team "Short Circuit"|Pesho              |
 | 16:00 |Express 11          |The Three Musketeers|
 ||||
@@ -70,7 +70,7 @@ Each team has exactly 30 minutes for their defense. They will be split as follow
 | 12:30 |M'bongoKongoDb   |take it easy  |
 ||||
 | 14:00 |Express 6        |NinjaCode  |
-| 14:30 |Express 2        |Express 16  |
+| 14:30 |Express 21       |Express 16  |
 | 15:00 |Watchmen         |Dominators  |
 | 15:30 |Fade             |Eternal Dependency  |
 | 16:00 |Bug Squashers Team  |Dank Memes  |
