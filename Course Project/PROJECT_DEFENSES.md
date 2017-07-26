@@ -10,7 +10,7 @@
 -  Team members must be on site at the appointed time slot with:
   - **Ready-to-run** project
     - `$ npm start` must start the application
-    - The version of the application **must be as it was on December 5th, 11:00 AM**
+    - The version of the application **must be as it was on August 01, 10:00 AM**
       - All later changes to the code-base will be skipped
   - **Working version in the cloud**
     - The applications must be presented in a cloud environment
