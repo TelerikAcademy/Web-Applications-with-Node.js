@@ -16,7 +16,7 @@
     - The applications must be presented in a cloud environment
     - The local copy of the application is just for convenience and code explanation
   - **Be strict in time**
-    - The schedule is be tight and any delay is unwelcome
+    - The schedule is tight and any delay is unwelcome
   - If any of the above is not met, the team will lose their slot for defense and must wait for another opening
   - Each team member must be **competent with at least 80% of the application**
 
