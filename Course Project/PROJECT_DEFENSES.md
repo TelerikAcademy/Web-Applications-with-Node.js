@@ -25,7 +25,7 @@
 Each team has exactly 30 minutes for their defense. They will be split as follows:
 
 1.  Each team member presents part of the application that they had worked on
-  - Each team members has **10 minutes** to present "their" part of the project
+  - Each team member has **10 minutes** to present "their" part of the project
 2.  The trainer asks questions
 
 - Keep in mind, that if the trainer has **suspicions about the participation of a team member**, he can give him/her a specific a specific task to be done immediately
